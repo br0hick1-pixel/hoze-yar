@@ -620,21 +620,28 @@ h1,h2,h3,h4,p{font-family:inherit;}
 /* =========================================================
    NEW logo — layered gradient emblem with shimmer
 ========================================================= */
-.hy-logo{ position:relative; width:44px; height:44px; flex-shrink:0; }
+.hy-logo{ position:relative; width:50px; height:50px; flex-shrink:0; filter:drop-shadow(0 6px 14px rgba(15,61,46,0.35)); }
 .hy-logo .ring{
-  position:absolute; inset:0; border-radius:15px;
+  position:absolute; inset:0; border-radius:17px;
   background:conic-gradient(from 0deg, var(--gold), var(--green), var(--gold-soft), var(--green-soft), var(--gold));
-  animation:logoSpin 5s linear infinite; opacity:.9;
+  animation:logoSpin 6s linear infinite; opacity:.95;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.15) inset;
 }
 .hy-logo .core{
-  position:absolute; inset:2.5px; border-radius:13px;
-  background:linear-gradient(155deg,var(--green-deep),var(--green) 60%,var(--green-soft));
-  display:flex; align-items:center; justify-content:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.12);
+  position:absolute; inset:3px; border-radius:14px; overflow:hidden;
+  background:linear-gradient(155deg,var(--green-deep),var(--green) 55%,var(--green-soft));
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.14), inset 0 -6px 10px rgba(0,0,0,0.28), inset 0 4px 8px rgba(255,255,255,0.10);
 }
-.hy-logo .core svg{width:24px;height:24px; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.25));}
+.hy-logo .core::before{
+  content:''; position:absolute; inset:0; border-radius:14px;
+  background:linear-gradient(200deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 40%);
+  pointer-events:none;
+}
+.hy-logo .core svg{width:28px;height:28px; filter:drop-shadow(0 3px 5px rgba(0,0,0,0.35)); position:relative; z-index:1;}
 .hy-logo .spark{
-  position:absolute; width:7px;height:7px; border-radius:50%;
-  background:var(--gold-soft); top:-2px; right:-2px; box-shadow:0 0 8px 2px rgba(240,223,168,0.8);
+  position:absolute; width:8px;height:8px; border-radius:50%;
+  background:var(--gold-soft); top:-3px; right:-3px; box-shadow:0 0 10px 3px rgba(240,223,168,0.9);
   animation:sparkPulse 2.2s ease-in-out infinite;
 }
 @keyframes logoSpin{ to{ transform:rotate(360deg); } }
@@ -681,6 +688,11 @@ h1,h2,h3,h4,p{font-family:inherit;}
 .econ-refresh svg{width:14px;height:14px;}
 .econ-refresh.spin svg{animation:spin 0.8s linear infinite;}
 .econ-note{font-size:11px; color:var(--text-sub); line-height:1.8; background:var(--card); border-radius:14px; padding:12px 14px; box-shadow:var(--shadow); margin-top:6px;}
+.navasan-wrap{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:8px; overflow-x:auto; }
+.navasan-wrap table{ width:100%; border-collapse:collapse; font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif; font-size:12.5px; }
+.navasan-wrap td,.navasan-wrap th{ padding:8px 6px; text-align:center; }
+.navasan-wrap tr+tr{ border-top:1px solid rgba(0,0,0,0.06); }
+[data-theme="dark"] .navasan-wrap tr+tr{ border-top:1px solid rgba(255,255,255,0.08); }
 
 /* =========================================================
    NEW: Library (Hawzah books)
@@ -934,50 +946,12 @@ h1,h2,h3,h4,p{font-family:inherit;}
       </div>
     </div>
 
-    <div class="section-title">دسترسی سریع</div>
-    <div class="card-grid">
-      <div class="feature-card accent-gold" onclick="go('music')">
-        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-        <h3>پخش موسیقی و مداحی</h3>
-        <p>موسیقی‌های دستگاه شما</p>
-      </div>
-      <div class="feature-card" onclick="go('news')">
-        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6z"/></svg></div>
-        <h3>اخبار</h3>
-        <p>منابع خبری معتبر</p>
-      </div>
-      <div class="feature-card" onclick="go('library')">
-        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/><path d="M6.5 17H20v3H6.5A2.5 2.5 0 014 17.5"/></svg></div>
-        <h3>کتابخانه حوزه</h3>
-        <p>کتاب‌های پایه ۱ تا ۶ و نظام قدیم</p>
-      </div>
-      <div class="feature-card" onclick="go('economy')">
-        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <h3>اقتصاد</h3>
-        <p>طلا، دلار، سکه و ارز دیجیتال</p>
-      </div>
-    </div>
-
-    <div class="section-title">حساب کاربری</div>
-    <div class="card-grid">
-      <div class="feature-card" onclick="go('profile')">
-        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <h3>پروفایل</h3>
-        <p>مدیریت حساب و تنظیمات</p>
-      </div>
-      <div class="feature-card" onclick="openDrawer()">
-        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
-        <h3>تنظیمات</h3>
-        <p>شخصی‌سازی برنامه</p>
-      </div>
-    </div>
-
     <div class="section-title">معنویت روزانه</div>
     <div class="card-grid">
       <div class="feature-card accent-gold" onclick="go('quran')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/><path d="M6.5 17H20v3H6.5A2.5 2.5 0 014 17.5"/></svg></div>
         <h3>قرآن روزانه</h3>
-        <p>تلاوت جزء به جزء</p>
+        <p>کتابخوان دیجیتال ورق‌خور</p>
       </div>
       <div class="feature-card" onclick="go('sayings')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
@@ -991,13 +965,37 @@ h1,h2,h3,h4,p{font-family:inherit;}
       </div>
       <div class="feature-card" onclick="go('music')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-        <h3>موسیقی و مداحی</h3>
+        <h3>مداحی و صوت</h3>
         <p>کتابخانه صوتی شما</p>
       </div>
     </div>
 
     <div class="section-title">اخیراً پخش شده</div>
     <div class="list-card" id="homeRecentList"></div>
+
+    <div class="section-title">دسترسی سریع</div>
+    <div class="card-grid">
+      <div class="feature-card" onclick="go('library')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/><path d="M6.5 17H20v3H6.5A2.5 2.5 0 014 17.5"/></svg></div>
+        <h3>کتابخانه حوزه</h3>
+        <p>کتاب‌های پایه ۱ تا ۶ و نظام قدیم</p>
+      </div>
+      <div class="feature-card" onclick="go('news')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6z"/></svg></div>
+        <h3>اخبار</h3>
+        <p>منابع خبری معتبر</p>
+      </div>
+      <div class="feature-card" onclick="go('economy')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>اقتصاد</h3>
+        <p>طلا، دلار، سکه و ارز دیجیتال</p>
+      </div>
+      <div class="feature-card" onclick="go('profile')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>پروفایل</h3>
+        <p>مدیریت حساب و تنظیمات</p>
+      </div>
+    </div>
   </section>
 
   <!-- ===================== QURAN ===================== -->
@@ -1126,16 +1124,15 @@ h1,h2,h3,h4,p{font-family:inherit;}
     </div>
     <div class="econ-updated" id="econUpdated">در حال دریافت آخرین قیمت‌ها...</div>
 
-    <div class="section-title">طلا و سکه</div>
-    <div class="price-grid" id="goldPriceGrid"></div>
-
-    <div class="section-title">ارز</div>
-    <div class="price-grid" id="currencyPriceGrid"></div>
+    <div class="section-title">طلا، سکه و ارز (زنده — نوسان)</div>
+    <div id="navasan_table_container" class="navasan-wrap"></div>
+    <script>function navasanret(data){document.getElementById('navasan_table_container').innerHTML=JSON.parse(data)}</script>
+    <script src="https://www.navasan.tech/wp-navasan.php?usd&eur&gbp&aed&try&jpy&cny&xau&18ayar&sekkeh&bahar&nim&rob&gerami"></script>
 
     <div class="section-title">ارز دیجیتال</div>
     <div class="price-grid" id="cryptoPriceGrid"></div>
 
-    <div class="econ-note">قیمت‌ها به‌صورت زنده از منابع آنلاین عمومی دریافت می‌شوند و ممکن است با نرخ صرافی‌های محلی اندکی تفاوت داشته باشد. این بخش صرفاً جنبه اطلاع‌رسانی دارد و توصیه مالی محسوب نمی‌شود.</div>
+    <div class="econ-note">قیمت طلا، سکه و ارز به‌صورت زنده از ویجت رسمی <a href="https://www.navasan.tech" target="_blank" rel="noopener" style="color:inherit;">نوسان (navasan.tech)</a> نمایش داده می‌شود و ارز دیجیتال از CoinGecko دریافت می‌گردد. این بخش صرفاً جنبه اطلاع‌رسانی دارد و توصیه مالی محسوب نمی‌شود.</div>
   </section>
 
   <!-- ===================== LIBRARY ===================== -->
@@ -1998,13 +1995,13 @@ function renderSayings(){
 /* ============ 14 MASOOMEEN — biographies ============ */
 const IMAMS = [
   {id:'nabi', badge:'ص', name:'پیامبر اکرم حضرت محمد(ص)', years:'۵۷۰ تا ۶۳۲ میلادی', short:'خاتم پیامبران',
-   bio:`<p>حضرت محمد بن عبدالله(ص) در سال عام‌الفیل در مکه به دنیا آمد. در چهل‌سالگی به پیامبری مبعوث شد و طی بیست و سه سال، قرآن کریم بر او نازل شد. ایشان بنیان‌گذار دین اسلام و به باور شیعیان، در واقعه‌ی غدیر خم، امام علی(ع) را به‌صراحت به‌عنوان جانشین خویش معرفی کردند.</p><p>پیامبر اکرم(ص) در سال یازدهم هجری در مدینه رحلت فرمودند و در همان‌جا مدفون شدند.</p>`},
+   bio:`<p>حضرت محمد بن عبدالله(ص) در سال عام‌الفیل در مکه به دنیا آمد. در چهل‌سالگی به پیامبری مبعوث شد و طی بیست و سه سال، قرآن کریم بر او نازل شد. ایشان بنیان‌گذار دین اسلام و در واقعه‌ی غدیر خم، امام علی(ع) را به‌صراحت به‌عنوان جانشین خویش معرفی کردند.</p><p>پیامبر اکرم(ص) در سال یازدهم هجری در مدینه رحلت فرمودند و در همان‌جا مدفون شدند.</p>`},
   {id:'zahra', badge:'ز', name:'حضرت فاطمه زهرا(س)', years:'۶۰۵ تا ۶۳۲ میلادی', short:'دختر پیامبر و همسر امام علی(ع)',
-   bio:`<p>حضرت فاطمه زهرا(س)، دختر پیامبر اکرم(ص) و همسر امام علی(ع)، مادر امام حسن و امام حسین(ع) است. در باور شیعه، ایشان یکی از چهار زن برتر عالم و مصداق آیه‌ی تطهیر است.</p><p>پس از رحلت پیامبر(ص)، ایشان به دفاع از حق امامت همسرشان پرداختند و ماجرای فدک و حوادث پس از آن، از دردناک‌ترین رخدادهای صدر اسلام برای شیعیان به شمار می‌رود. ایشان تنها چند ماه پس از پدر، از دنیا رفتند.</p>`},
+   bio:`<p>حضرت فاطمه زهرا(س)، دختر پیامبر اکرم(ص) و همسر امام علی(ع)، مادر امام حسن و امام حسین(ع) است. ایشان یکی از چهار زن برتر عالم و مصداق آیه‌ی تطهیر است.</p><p>پس از رحلت پیامبر(ص)، ایشان به دفاع از حق امامت همسرشان پرداختند و ماجرای فدک و حوادث پس از آن، از دردناک‌ترین رخدادهای صدر اسلام برای شیعیان به شمار می‌رود. ایشان تنها چند ماه پس از پدر، از دنیا رفتند.</p>`},
   {id:'ali', badge:'۱', name:'امام علی بن ابی‌طالب(ع)', years:'۶۰۰ تا ۶۶۱ میلادی', short:'امام اول — یعسوب‌الدین',
    deep:true, bio:''},
   {id:'hasan', badge:'۲', name:'امام حسن مجتبی(ع)', years:'۶۲۵ تا ۶۶۹ میلادی', short:'امام دوم — کریم اهل‌بیت',
-   bio:`<p>امام حسن مجتبی(ع)، فرزند ارشد امام علی(ع) و حضرت فاطمه(س)، پس از شهادت پدر به امامت رسید. ایشان به دلیل شرایط سخت سیاسی و کاستن از خون‌ریزی میان مسلمانان، با معاویه صلح کردند؛ صلحی که در تحلیل شیعه، اقدامی حکیمانه برای حفظ اصل تشیع بود، نه واگذاری حق.</p><p>ایشان سرانجام به دسیسه‌ی مسموم شدن به شهادت رسیدند و در قبرستان بقیع مدینه به خاک سپرده شدند.</p>`},
+   bio:`<p>امام حسن مجتبی(ع)، فرزند ارشد امام علی(ع) و حضرت فاطمه(س)، پس از شهادت پدر به امامت رسید. ایشان به دلیل شرایط سخت سیاسی و کاستن از خون‌ریزی میان مسلمانان، با معاویه صلح کردند؛ صلحی که اقدامی حکیمانه برای حفظ اصل تشیع بود، نه واگذاری حق.</p><p>ایشان سرانجام به دسیسه‌ی مسموم شدن به شهادت رسیدند و در قبرستان بقیع مدینه به خاک سپرده شدند.</p>`},
   {id:'hosein', badge:'۳', name:'امام حسین(ع)', years:'۶۲۶ تا ۶۸۰ میلادی', short:'امام سوم — سالار شهیدان',
    bio:`<p>امام حسین(ع) در برابر خلافت ظالمانه‌ی یزید بن معاویه قیام کرد و در روز عاشورا (سال ۶۱ هجری) در کربلا، همراه با یاران و اهل‌بیتش، پس از مقاومتی بی‌نظیر، مظلومانه به شهادت رسید. قیام او الهام‌بخش نهضت‌های عدالت‌خواهانه در طول تاریخ اسلام بوده است.</p>`},
   {id:'sajjad', badge:'۴', name:'امام سجاد(ع)', years:'۶۵۸ تا ۷۱۳ میلادی', short:'امام چهارم — زین‌العابدین',
@@ -2028,18 +2025,18 @@ const IMAMS = [
 ];
 
 const ALI_BIO = `
-<p>امام علی بن ابی‌طالب(ع) در سال ۶۰۰ میلادی، به روایت مشهور شیعه، درون خانه‌ی کعبه به دنیا آمد؛ افتخاری که هیچ‌کس دیگری آن را نداشته است. او پسرعموی پیامبر اکرم(ص) و اولین مرد مسلمان جهان بود که در کودکی به آیین اسلام گروید و هرگز حتی لحظه‌ای بت نپرستید.</p>
+<p>امام علی بن ابی‌طالب(ع) در سال ۶۰۰ میلادی، درون خانه‌ی کعبه به دنیا آمد؛ افتخاری که هیچ‌کس دیگری آن را نداشته است. او پسرعموی پیامبر اکرم(ص) و اولین مرد مسلمان جهان بود که در کودکی به آیین اسلام گروید و هرگز حتی لحظه‌ای بت نپرستید.</p>
 <p>امام علی(ع) در تمامی غزوات پیامبر(ص) — به‌جز تبوک که به فرمان پیامبر در مدینه ماند — حضوری فعال و تعیین‌کننده داشت؛ از بدر و احد تا خندق و خیبر. شجاعت، ایثار و پایبندی او به حق، از او چهره‌ای بی‌بدیل در تاریخ اسلام ساخته است. او همچنین داماد پیامبر(ص) و همسر حضرت فاطمه زهرا(س)، مادر امام حسن و امام حسین(ع)، بود.</p>
 
 <h3>واقعه‌ی غدیر خم — نص صریح بر جانشینی</h3>
 <p>در سال دهم هجری، پیامبر اکرم(ص) در بازگشت از حجةالوداع، در سرزمین غدیر خم، در برابر جمعیتی عظیم از حجاج، دست امام علی(ع) را بالا برد و فرمود: «مَن کُنتُ مولاه فهذا علیٌّ مولاه» — هر که من مولای اویم، این علی مولای اوست. شیعیان این سخن را نص صریح پیامبر(ص) بر جانشینی بلافصل امام علی(ع) می‌دانند، رخدادی که در منابع اهل سنت نیز با اسناد متعدد گزارش شده، هرچند در تفسیر معنای «مولا» اختلاف نظر وجود دارد.</p>
 
 <h3>چرا خلافت باید به او می‌رسید</h3>
-<p>از منظر شیعه، دلایل متعددی بر شایستگی و حق مسلّم امام علی(ع) برای جانشینی پیامبر(ص) وجود دارد: نص صریح غدیر خم، قرابت نزدیک با پیامبر(ص)، اولین ایمان‌آورنده بودن، برترین جایگاه علمی («أنا مدینة العلم و علیٌّ بابها»)، و شجاعت و فداکاری بی‌مانند او در دفاع از اسلام، از جمله در لیلة‌المبیت که به‌جای پیامبر(ص) در بستر او خوابید تا جان پیامبر(ص) را از قصد قتل مشرکان مکه حفظ کند.</p>
+<p>دلایل متعددی بر شایستگی و حق مسلّم امام علی(ع) برای جانشینی پیامبر(ص) وجود دارد: نص صریح غدیر خم، قرابت نزدیک با پیامبر(ص)، اولین ایمان‌آورنده بودن، برترین جایگاه علمی («أنا مدینة العلم و علیٌّ بابها»)، و شجاعت و فداکاری بی‌مانند او در دفاع از اسلام، از جمله در لیلة‌المبیت که به‌جای پیامبر(ص) در بستر او خوابید تا جان پیامبر(ص) را از قصد قتل مشرکان مکه حفظ کند.</p>
 
 <h3>مظلومیت پس از رحلت پیامبر(ص)</h3>
-<p>در باور شیعه، بلافاصله پس از رحلت پیامبر(ص)، در حالی که امام علی(ع) مشغول تجهیز و کفن‌ودفن ایشان بود، جمعی در سقیفه‌ی بنی‌ساعده گرد آمدند و بدون مشورت با خاندان پیامبر(ص)، فردی دیگر را به خلافت برگزیدند. امام علی(ع) برای حفظ وحدت مسلمانان و جلوگیری از تفرقه در دورانی حساس، از قیام مسلحانه خودداری کرد، هرچند حق خویش را آشکارا و به‌صراحت در سخنانی چون خطبه‌ی شقشقیه بیان نمود.</p>
-<p>در پی این رخدادها، ماجرای فدک — زمینی که پیامبر(ص) در حیات خویش به دخترشان فاطمه(س) بخشیده بودند — نیز به بحرانی دردناک تبدیل شد. علی‌رغم اعتراض و خطبه‌ی معروف حضرت زهرا(س)، فدک از ایشان پس گرفته شد؛ رخدادی که در کنار حوادث دیگر آن ایام، به باور شیعیان از مصداق‌های آشکار ظلم به خاندان پیامبر(ص) است.</p>
+<p>بلافاصله پس از رحلت پیامبر(ص)، در حالی که امام علی(ع) مشغول تجهیز و کفن‌ودفن ایشان بود، جمعی در سقیفه‌ی بنی‌ساعده گرد آمدند و بدون مشورت با خاندان پیامبر(ص)، فردی دیگر را به خلافت برگزیدند. امام علی(ع) برای حفظ وحدت مسلمانان و جلوگیری از تفرقه در دورانی حساس، از قیام مسلحانه خودداری کرد، هرچند حق خویش را آشکارا و به‌صراحت در سخنانی چون خطبه‌ی شقشقیه بیان نمود.</p>
+<p>در پی این رخدادها، ماجرای فدک — زمینی که پیامبر(ص) در حیات خویش به دخترشان فاطمه(س) بخشیده بودند — نیز به بحرانی دردناک تبدیل شد. علی‌رغم اعتراض و خطبه‌ی معروف حضرت زهرا(س)، فدک از ایشان پس گرفته شد؛ رخدادی که در کنار حوادث دیگر آن ایام، از مصداق‌های آشکار ظلم به خاندان پیامبر(ص) است.</p>
 <p>امام علی(ع) سرانجام پس از بیست و پنج سال خانه‌نشینی و دوری از منصب حقیقی خویش، در سال ۳۵ هجری به خلافت رسید؛ دورانی که با جنگ‌های جمل، صفین و نهروان — تحمیل‌شده از سوی مخالفان داخلی — همراه بود. او حتی در اوج قدرت نیز به عدالت و ساده‌زیستی شهره بود و از بیت‌المال مسلمانان، حتی به‌اندازه‌ی سر سوزنی، برای خود برنمی‌داشت.</p>
 <p>سرانجام در نوزدهم رمضان سال ۴۰ هجری، به دست عبدالرحمن بن ملجم مرادی، عضو گروه خوارج، در محراب مسجد کوفه، هنگام نماز صبح ضربت خورد و دو روز بعد، در بیست‌ویکم رمضان، به شهادت رسید. امام علی(ع) در نجف اشرف مدفون است و حرم مطهر او یکی از مقدس‌ترین اماکن جهان تشیع به شمار می‌رود.</p>
 <p style="font-size:11.5px; color:var(--text-sub);">توضیح: این متن براساس منابع و روایت تاریخی رایج در سنت شیعه نگاشته شده است؛ برخی از این رخدادها در میان مذاهب اسلامی، به‌ویژه در تفسیر و ارزیابی، محل اختلاف نظرند.</p>
@@ -2205,40 +2202,8 @@ async function loadEconomyPrices(manual){
     const grid = document.getElementById('cryptoPriceGrid');
     if(grid) grid.innerHTML = `<div class="econ-note" style="grid-column:1/-1;">دریافت قیمت ارز دیجیتال ممکن نشد — اتصال اینترنت یا دسترسی به CoinGecko را بررسی کنید.</div>`;
   }
-  // ---- Gold / Coin / Currency (IRR market, free public endpoint) ----
-  try{
-    const res = await fetch('https://api.codebazan.ir/arz/');
-    const data = await res.json();
-    const find = (key) => Array.isArray(data) ? data.find(x => (x.title_en||x.key||'').toLowerCase().includes(key) || (x.title||'').includes(key)) : null;
-    const gold18 = find('geram18') || find('gold_18') || find('طلای 18');
-    const coinEmami = find('sekee') || find('emami') || find('سکه امامی');
-    const coinRobe = find('rob_sekee') || find('ربع');
-    const coinNim = find('nim_sekee') || find('نیم');
-    const dollar = find('usd') || find('دلار');
-    const goldGrid = document.getElementById('goldPriceGrid');
-    const curGrid = document.getElementById('currencyPriceGrid');
-    const gi = iconSvg('<circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>');
-    const ci = iconSvg('<circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/>');
-    const di = iconSvg('<path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>');
-    if(goldGrid){
-      goldGrid.innerHTML =
-        priceCard('طلای ۱۸ عیار (گرم)', gold18 ? fmtToman(gold18.price) : 'نیازمند بروزرسانی', null, true, gi) +
-        priceCard('سکه امامی', coinEmami ? fmtToman(coinEmami.price) : 'نیازمند بروزرسانی', null, true, ci) +
-        priceCard('نیم سکه', coinNim ? fmtToman(coinNim.price) : 'نیازمند بروزرسانی', null, true, ci) +
-        priceCard('ربع سکه', coinRobe ? fmtToman(coinRobe.price) : 'نیازمند بروزرسانی', null, true, ci);
-    }
-    if(curGrid){
-      curGrid.innerHTML = priceCard('دلار آمریکا', dollar ? fmtToman(dollar.price) : 'نیازمند بروزرسانی', null, true, di);
-    }
-  }catch(err){
-    const goldGrid = document.getElementById('goldPriceGrid');
-    const curGrid = document.getElementById('currencyPriceGrid');
-    const note = `<div class="econ-note" style="grid-column:1/-1;">قیمت طلا، سکه و دلار به‌صورت پیش‌فرض به یک منبع رایگان وصل است. اگر نمایش داده نشد، لطفاً آدرس API دلخواه خود (مانند brsapi یا navasan) را در تابع loadEconomyPrices جایگزین کنید.</div>`;
-    if(goldGrid) goldGrid.innerHTML = note;
-    if(curGrid) curGrid.innerHTML = '';
-  }
   econLoaded = true;
-  if(updated) updated.textContent = 'آخرین به‌روزرسانی: ' + new Date().toLocaleTimeString('fa-IR');
+  if(updated) updated.textContent = 'آخرین به‌روزرسانی ارز دیجیتال: ' + new Date().toLocaleTimeString('fa-IR');
   if(btn) setTimeout(()=>btn.classList.remove('spin'), 500);
 }
 
