@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
-<title>حوزه یار</title>
+<title>طلبه یار</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
@@ -150,34 +150,34 @@ body{
 
 /* ---------- Home ---------- */
 .greeting{
-  padding:24px 20px 20px 20px; border-radius:26px; margin-bottom:16px;
+  padding:14px 16px 12px 16px; border-radius:20px; margin-bottom:12px;
   background:linear-gradient(135deg, var(--green-deep), var(--green) 70%, var(--green-soft));
   color:#F7F3E9; box-shadow:var(--shadow); position:relative; overflow:hidden;
 }
 [data-theme="dark"] .greeting{color:#0F1A15;}
 .greeting::after{
-  content:''; position:absolute; left:-30px; bottom:-30px; width:120px; height:120px; border-radius:50%;
+  content:''; position:absolute; left:-30px; bottom:-30px; width:90px; height:90px; border-radius:50%;
   background:rgba(201,162,75,0.25);
 }
 .greeting::before{
-  content:''; position:absolute; right:-20px; top:-40px; width:150px; height:150px; border-radius:50%;
+  content:''; position:absolute; right:-20px; top:-30px; width:100px; height:100px; border-radius:50%;
   background:radial-gradient(circle, rgba(240,223,168,0.28), transparent 70%);
 }
-.greeting-top{display:flex; align-items:flex-start; justify-content:space-between; position:relative; z-index:1;}
-.greeting h1{margin:0 0 6px 0; font-size:19px; font-weight:800;}
-.greeting p{margin:0; font-size:12.5px; opacity:.85; line-height:1.6; max-width:80%;}
+.greeting-top{display:flex; align-items:center; justify-content:space-between; position:relative; z-index:1;}
+.greeting h1{margin:0 0 2px 0; font-size:14.5px; font-weight:800;}
+.greeting p{margin:0; font-size:10.5px; opacity:.8; line-height:1.4; max-width:78%;}
 .greeting-badge{
-  width:46px;height:46px;border-radius:14px; background:rgba(255,255,255,0.14);
+  width:34px;height:34px;border-radius:11px; background:rgba(255,255,255,0.14);
   display:flex; align-items:center; justify-content:center; flex-shrink:0; backdrop-filter:blur(4px);
 }
-.greeting-badge svg{width:22px;height:22px;}
+.greeting-badge svg{width:16px;height:16px;}
 
-.stat-row{display:flex; gap:10px; margin:14px 0 20px 0; position:relative; z-index:1;}
+.stat-row{display:flex; gap:8px; margin:10px 0 2px 0; position:relative; z-index:1;}
 .stat-chip{
-  flex:1; background:rgba(255,255,255,0.14); border-radius:16px; padding:10px 12px;
+  flex:1; background:rgba(255,255,255,0.14); border-radius:13px; padding:6px 8px;
   text-align:center; backdrop-filter:blur(4px);
 }
-.stat-chip b{display:block; font-size:16px; font-weight:800; margin-bottom:1px;}
+.stat-chip b{display:block; font-size:13px; font-weight:800; margin-bottom:0;}
 .stat-chip span{font-size:10px; opacity:.8;}
 
 .section-title{font-size:15px; font-weight:700; margin:22px 2px 12px 2px; color:var(--text-main); display:flex; align-items:center; gap:6px;}
@@ -191,15 +191,19 @@ body{
 }
 .feature-card:active{transform:scale(0.96);}
 .fc-icon{
-  width:42px;height:42px;border-radius:13px; display:flex; align-items:center; justify-content:center;
+  width:42px;height:42px;min-width:42px;min-height:42px;max-width:42px;max-height:42px;border-radius:13px; display:flex; align-items:center; justify-content:center;
   margin-bottom:10px; background:linear-gradient(145deg,var(--sage),var(--green-soft)); color:var(--green-deep);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4); flex-shrink:0; overflow:hidden;
 }
 [data-theme="dark"] .fc-icon{color:var(--green-deep); background:linear-gradient(145deg,var(--sage),var(--green-soft));}
-.fc-icon svg{width:20px;height:20px;}
+.fc-icon svg{width:20px;height:20px; flex-shrink:0;}
 .feature-card h3{font-size:14px; margin:0 0 4px 0; font-weight:700;}
 .feature-card p{font-size:11px; color:var(--text-sub); margin:0; line-height:1.5;}
 .feature-card.accent-gold .fc-icon{background:linear-gradient(145deg,var(--gold-soft),var(--gold)); color:var(--green-deep);}
+.feature-card.accent-blue .fc-icon{background:linear-gradient(145deg,#8FB8E8,#2E5FA3); color:#0D2140;}
+.feature-card.accent-wine .fc-icon{background:linear-gradient(145deg,#E8A2B0,#9C2B3E); color:#3A0F17;}
+.feature-card.accent-violet .fc-icon{background:linear-gradient(145deg,#C7ABEA,#6A3FA0); color:#2A1747;}
+.feature-card.accent-teal .fc-icon{background:linear-gradient(145deg,#8FD8DE,#1E8A9E); color:#0D3B44;}
 
 .list-card{
   background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
@@ -236,6 +240,34 @@ body{
 .music-search input::placeholder{color:var(--text-sub);}
 .music-toolrow{display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;}
 .music-count{font-size:11px; color:var(--text-sub);}
+.kashoob-embed-wrap{
+  position:relative; border-radius:18px; overflow:hidden; box-shadow:var(--shadow); background:var(--card);
+  height:560px; margin-bottom:6px; transition:height .3s ease;
+}
+.kashoob-embed-wrap.collapsed{ height:0; margin-bottom:0; }
+.kashoob-embed-wrap.expanded{ height:82vh; }
+.kashoob-embed-wrap iframe{ width:100%; height:100%; border:none; }
+.kashoob-toolbar{display:flex; align-items:center; gap:8px; margin:0 0 10px 0;}
+.kashoob-toolbar .kt-btn{
+  display:flex; align-items:center; gap:5px; background:var(--card); border:1px solid rgba(0,0,0,0.05);
+  border-radius:12px; padding:8px 12px; font-size:11px; font-weight:700; color:var(--text-main); cursor:pointer; box-shadow:var(--shadow);
+}
+.kashoob-toolbar .kt-btn svg{width:14px;height:14px;}
+.add-music-banner{
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  background:linear-gradient(135deg, rgba(34,121,90,0.12), rgba(212,175,90,0.10));
+  border:1.5px dashed var(--sage); border-radius:16px; padding:14px 16px; margin-bottom:16px;
+}
+.add-music-banner .amb-text h4{margin:0 0 3px 0; font-size:13px; font-weight:700;}
+.add-music-banner .amb-text p{margin:0; font-size:10.5px; color:var(--text-sub);}
+.add-music-banner .amb-actions{display:flex; gap:8px; flex-wrap:wrap;}
+.amb-btn{
+  display:flex; align-items:center; gap:6px; padding:9px 14px; border-radius:12px; cursor:pointer;
+  font-size:11.5px; font-weight:700; background:var(--card); box-shadow:var(--shadow); color:var(--text-main);
+}
+.amb-btn svg{width:15px;height:15px;}
+.amb-btn.primary{background:linear-gradient(135deg,var(--green),var(--green-deep)); color:#F7F3E9;}
+[data-theme="dark"] .amb-btn.primary{color:#0F1A15;}
 .sort-chip{
   display:flex; align-items:center; gap:5px; background:var(--card); border:1px solid rgba(0,0,0,0.05);
   border-radius:12px; padding:7px 12px; font-size:11px; color:var(--text-main); cursor:pointer; box-shadow:var(--shadow);
@@ -297,6 +329,10 @@ body{
 .nav-item span{font-size:10px; font-weight:600;}
 .nav-item.active{color:var(--green);}
 .nav-item.active svg{transform:translateY(-2px);}
+.nav-item.nav-home{ margin-top:0; }
+.nav-item.nav-home svg{ width:21px;height:21px; }
+[data-theme="dark"] .nav-item.nav-home svg{ color:inherit; }
+.nav-item.nav-home.active svg{ transform:translateY(-2px); }
 .nav-item.active::before{
   content:''; position:absolute; top:-9px; width:5px;height:5px;border-radius:50%; background:var(--gold);
 }
@@ -396,6 +432,17 @@ body{
 .avatar svg{width:100%;height:100%;}
 .profile-head h2{margin:0 0 4px 0; font-size:17px;}
 .profile-head p{margin:0; font-size:12px; color:var(--text-sub);}
+.profile-head .profile-bio{margin-top:6px; font-size:11.5px; color:var(--text-main); max-width:280px; margin-left:auto; margin-right:auto; line-height:1.7;}
+.pc-field{margin-bottom:14px;}
+.pc-field:last-of-type{margin-bottom:0;}
+.pc-field label{display:block; font-size:11.5px; font-weight:700; margin-bottom:8px; color:var(--text-main);}
+.pc-field textarea{
+  width:100%; border:1.5px solid var(--sage); background:var(--card); border-radius:14px;
+  padding:11px 13px; font-family:inherit; font-size:12.5px; color:var(--text-main); outline:none; resize:none;
+}
+.profile-cover-swatches{display:flex; flex-wrap:wrap; gap:10px;}
+.pcs-dot{width:32px;height:32px;border-radius:50%; cursor:pointer; border:2px solid transparent; box-shadow:var(--shadow);}
+.pcs-dot.active{border-color:var(--gold);}
 
 /* ---------- Settings ---------- */
 .settings-group{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:16px; overflow:hidden;}
@@ -508,6 +555,41 @@ h1,h2,h3,h4,p{font-family:inherit;}
 .saying-card p{margin:0 0 8px 0; font-size:13.5px; line-height:2; color:var(--text-main);}
 .saying-card span{font-size:11px; color:var(--green); font-weight:700;}
 
+/* ---------- Hadith of the day (compact glass, dismissible) ---------- */
+.hadith-of-day{
+  position:fixed; top:70px; left:12px; z-index:400; width:min(78vw, 280px);
+  background:rgba(18,32,26,0.55); backdrop-filter:blur(16px) saturate(160%); -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid rgba(201,162,75,0.35); border-radius:16px; padding:11px 14px;
+  box-shadow:0 12px 28px rgba(0,0,0,0.25); color:#F7F3E9;
+  transform:translateX(-115%); transition:transform .5s cubic-bezier(.2,.8,.2,1);
+  cursor:pointer;
+}
+[data-theme="dark"] .hadith-of-day{color:#F1EEE2;}
+.hadith-of-day.show{ transform:translateX(0); }
+.hadith-of-day .hod-label{font-size:9px; font-weight:700; color:var(--gold-soft); margin-bottom:5px; display:block;}
+.hadith-of-day p{margin:0 0 5px 0; font-size:11px; line-height:1.75;}
+.hadith-of-day span.hod-src{font-size:9.5px; opacity:.75; font-weight:700;}
+.hod-dismiss{position:absolute; top:6px; left:6px; width:20px;height:20px; border-radius:50%; border:none; background:rgba(255,255,255,0.14); color:#F7F3E9; display:flex; align-items:center; justify-content:center; cursor:pointer;}
+.hod-dismiss svg{width:11px;height:11px;}
+
+/* ---------- Floating glass quick-nav strip ---------- */
+.quicknav-strip{
+  position:relative; margin:14px 0 4px 0; overflow:hidden; border-radius:18px;
+  background:rgba(255,255,255,0.78); backdrop-filter:blur(14px) saturate(160%); -webkit-backdrop-filter:blur(14px) saturate(160%);
+  border:1px solid rgba(15,61,46,0.10); box-shadow:var(--shadow); padding:10px 0;
+}
+[data-theme="dark"] .quicknav-strip{ background:rgba(18,32,26,0.55); border:1px solid rgba(255,255,255,0.08); }
+.quicknav-track{ display:flex; gap:10px; width:max-content; padding:0 10px; overflow-x:auto; }
+.quicknav-strip:active .quicknav-track{ animation-play-state:paused; }
+.quicknav-chip{
+  display:flex; flex-direction:column; align-items:center; gap:5px; flex-shrink:0; width:64px;
+  padding:8px 4px; border-radius:14px; cursor:pointer; background:rgba(15,61,46,0.06);
+}
+[data-theme="dark"] .quicknav-chip{ background:rgba(255,255,255,0.06); }
+.quicknav-chip svg{width:18px;height:18px; color:var(--green);}
+.quicknav-chip span{font-size:9.5px; font-weight:600; color:var(--text-main); white-space:nowrap;}
+@media (prefers-reduced-motion: reduce){ .quicknav-track{ animation:none; overflow-x:auto; } }
+
 /* ---------- Screen header back button ---------- */
 .back-title{display:flex; align-items:center; gap:12px; margin-bottom:4px;}
 
@@ -535,7 +617,17 @@ h1,h2,h3,h4,p{font-family:inherit;}
 .ob-wrap{max-width:480px; width:100%; margin:0 auto; padding:36px 22px 30px 22px; display:flex; flex-direction:column; min-height:100%;}
 .ob-logo{width:76px;height:76px; margin:0 auto 18px auto;}
 .ob-title{font-size:21px; font-weight:800; text-align:center; margin:0 0 6px 0;}
-.ob-sub{font-size:12.5px; color:var(--text-sub); text-align:center; margin:0 0 30px 0; line-height:1.8;}
+.ob-sub{font-size:12.5px; color:var(--text-sub); text-align:center; margin:0 0 20px 0; line-height:1.8;}
+.ob-google-card{
+  background:linear-gradient(135deg, rgba(62,174,124,0.12), rgba(201,162,75,0.10));
+  border:1px solid rgba(201,162,75,0.35); border-radius:18px; padding:14px;
+  display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:18px;
+}
+.ob-google-inner{display:flex; align-items:center; gap:10px;}
+.ob-google-inner b{display:block; font-size:13px;}
+.ob-google-inner span{display:block; font-size:10.5px; color:var(--text-sub); margin-top:1px;}
+.ob-divider{display:flex; align-items:center; gap:10px; margin:0 0 18px 0; color:var(--text-sub); font-size:11px;}
+.ob-divider::before, .ob-divider::after{content:''; flex:1; height:1px; background:var(--cream-deep);}
 .ob-field{margin-bottom:16px;}
 .ob-field label{display:block; font-size:12px; font-weight:700; margin-bottom:8px; color:var(--text-main);}
 .ob-field input, .ob-field textarea{
@@ -561,33 +653,38 @@ h1,h2,h3,h4,p{font-family:inherit;}
 }
 .drawer-overlay.show{opacity:1; pointer-events:auto;}
 .side-drawer{
-  position:fixed; top:0; bottom:0; right:-86%; width:82%; max-width:340px; z-index:199;
-  background:var(--cream); box-shadow:-10px 0 40px rgba(0,0,0,0.25);
+  position:fixed; top:0; bottom:0; right:-86%; width:82%; max-width:320px; z-index:199;
+  background:rgba(253,251,245,0.72); backdrop-filter:blur(22px) saturate(170%); -webkit-backdrop-filter:blur(22px) saturate(170%);
+  box-shadow:-10px 0 40px rgba(0,0,0,0.2); border-left:1px solid rgba(255,255,255,0.4);
   transition:right .32s cubic-bezier(.2,.85,.25,1); overflow-y:auto;
-  border-left:1px solid rgba(0,0,0,0.04);
-  padding:calc(env(safe-area-inset-top) + 22px) 18px 30px 18px;
+  padding:calc(env(safe-area-inset-top) + 20px) 16px 30px 16px;
 }
-[dir="rtl"] .side-drawer{right:auto; left:-86%; border-left:none; border-right:1px solid rgba(0,0,0,0.04); box-shadow:10px 0 40px rgba(0,0,0,0.25);}
+[data-theme="dark"] .side-drawer{ background:rgba(18,32,26,0.72); border-left:1px solid rgba(255,255,255,0.06); }
+[dir="rtl"] .side-drawer{right:auto; left:-86%; border-left:none; border-right:1px solid rgba(255,255,255,0.4); box-shadow:10px 0 40px rgba(0,0,0,0.2);}
+[data-theme="dark"][dir="rtl"] .side-drawer{ border-right:1px solid rgba(255,255,255,0.06); }
 .side-drawer.show{right:0;}
 [dir="rtl"] .side-drawer.show{left:0;}
-.sd-profile{display:flex; align-items:center; gap:12px; padding:6px 4px 20px 4px; border-bottom:1px solid var(--cream-deep); margin-bottom:14px;}
-.sd-profile .av-mini{width:50px;height:50px;border-radius:50%; overflow:hidden; background:linear-gradient(160deg,var(--sage),var(--green-soft)); flex-shrink:0; box-shadow:var(--shadow);}
+.sd-profile{display:flex; align-items:center; gap:12px; padding:6px 6px 18px 6px; border-bottom:1px solid rgba(120,120,120,0.15); margin-bottom:12px;}
+.sd-profile .av-mini{width:48px;height:48px;border-radius:50%; overflow:hidden; background:linear-gradient(160deg,var(--sage),var(--green-soft)); flex-shrink:0; box-shadow:var(--shadow);}
 .sd-profile .av-mini svg{width:100%;height:100%;}
-.sd-profile h4{margin:0; font-size:14.5px; font-weight:700;}
-.sd-profile p{margin:2px 0 0 0; font-size:11px; color:var(--text-sub);}
-.sd-close{width:34px;height:34px;border-radius:10px; border:none; background:var(--card); box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; color:var(--text-sub); margin-bottom:8px; cursor:pointer;}
-.sd-section{font-size:10.5px; font-weight:700; color:var(--text-sub); margin:18px 6px 8px 6px; letter-spacing:.03em;}
+.sd-profile h4{margin:0; font-size:14px; font-weight:700;}
+.sd-profile p{margin:2px 0 0 0; font-size:10.5px; color:var(--text-sub);}
+.sd-close{width:32px;height:32px;border-radius:10px; border:none; background:rgba(255,255,255,0.35); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; color:var(--text-sub); margin-bottom:6px; cursor:pointer;}
+[data-theme="dark"] .sd-close{ background:rgba(255,255,255,0.08); }
+.sd-section{font-size:10px; font-weight:700; color:var(--text-sub); margin:16px 8px 6px 8px; letter-spacing:.04em;}
 .sd-item{
-  display:flex; align-items:center; gap:12px; padding:11px 10px; border-radius:13px; cursor:pointer;
-  font-size:13px; font-weight:600; color:var(--text-main); transition:background .15s ease;
+  display:flex; align-items:center; gap:11px; padding:10px 10px; border-radius:14px; cursor:pointer;
+  font-size:12.5px; font-weight:600; color:var(--text-main); transition:background .15s ease;
 }
-.sd-item:active{background:var(--cream-deep);}
-.sd-item svg{width:18px;height:18px; color:var(--green); flex-shrink:0;}
-.sd-item .sd-arrow{margin-right:auto; margin-left:0; width:13px;height:13px; color:var(--text-sub);}
+.sd-item:active{background:rgba(255,255,255,0.35);}
+[data-theme="dark"] .sd-item:active{ background:rgba(255,255,255,0.06); }
+.sd-item svg{width:17px;height:17px; color:var(--green); flex-shrink:0;}
+.sd-item .sd-arrow{margin-right:auto; margin-left:0; width:12px;height:12px; color:var(--text-sub);}
 
 /* three-dot trigger */
-.dots-btn{width:40px;height:40px;border-radius:12px; border:none; background:var(--card); box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; color:var(--green); cursor:pointer;}
-.dots-btn svg{width:19px;height:19px;}
+.dots-btn{width:38px;height:38px;border-radius:12px; border:1px solid rgba(255,255,255,0.5); background:rgba(255,255,255,0.35); backdrop-filter:blur(8px); box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; color:var(--green); cursor:pointer;}
+[data-theme="dark"] .dots-btn{ background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); }
+.dots-btn svg{width:18px;height:18px;}
 
 /* =========================================================
    NEW: micro tap / ripple animation (global)
@@ -598,6 +695,7 @@ h1,h2,h3,h4,p{font-family:inherit;}
 }
 @keyframes tapRipple{ to{ transform:scale(2.6); opacity:0; } }
 .feature-card, .news-source, .book-card, .row, .nav-item, .sd-item, .price-card, .grade-chip, .library-tab, .icon-btn, .dots-btn{ position:relative; overflow:hidden; }
+.nav-item.nav-home{ overflow:visible; }
 
 /* =========================================================
    Bottom nav -> floating glass pill (rounded, lifted)
@@ -620,28 +718,21 @@ h1,h2,h3,h4,p{font-family:inherit;}
 /* =========================================================
    NEW logo — layered gradient emblem with shimmer
 ========================================================= */
-.hy-logo{ position:relative; width:50px; height:50px; flex-shrink:0; filter:drop-shadow(0 6px 14px rgba(15,61,46,0.35)); }
+.hy-logo{ position:relative; width:44px; height:44px; flex-shrink:0; }
 .hy-logo .ring{
-  position:absolute; inset:0; border-radius:17px;
+  position:absolute; inset:0; border-radius:15px;
   background:conic-gradient(from 0deg, var(--gold), var(--green), var(--gold-soft), var(--green-soft), var(--gold));
-  animation:logoSpin 6s linear infinite; opacity:.95;
-  box-shadow:0 0 0 1px rgba(255,255,255,0.15) inset;
+  animation:logoSpin 5s linear infinite; opacity:.9;
 }
 .hy-logo .core{
-  position:absolute; inset:3px; border-radius:14px; overflow:hidden;
-  background:linear-gradient(155deg,var(--green-deep),var(--green) 55%,var(--green-soft));
-  display:flex; align-items:center; justify-content:center;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.14), inset 0 -6px 10px rgba(0,0,0,0.28), inset 0 4px 8px rgba(255,255,255,0.10);
+  position:absolute; inset:2.5px; border-radius:13px;
+  background:linear-gradient(155deg,var(--green-deep),var(--green) 60%,var(--green-soft));
+  display:flex; align-items:center; justify-content:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.12);
 }
-.hy-logo .core::before{
-  content:''; position:absolute; inset:0; border-radius:14px;
-  background:linear-gradient(200deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 40%);
-  pointer-events:none;
-}
-.hy-logo .core svg{width:28px;height:28px; filter:drop-shadow(0 3px 5px rgba(0,0,0,0.35)); position:relative; z-index:1;}
+.hy-logo .core svg{width:24px;height:24px; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.25));}
 .hy-logo .spark{
-  position:absolute; width:8px;height:8px; border-radius:50%;
-  background:var(--gold-soft); top:-3px; right:-3px; box-shadow:0 0 10px 3px rgba(240,223,168,0.9);
+  position:absolute; width:7px;height:7px; border-radius:50%;
+  background:var(--gold-soft); top:-2px; right:-2px; box-shadow:0 0 8px 2px rgba(240,223,168,0.8);
   animation:sparkPulse 2.2s ease-in-out infinite;
 }
 @keyframes logoSpin{ to{ transform:rotate(360deg); } }
@@ -683,22 +774,48 @@ h1,h2,h3,h4,p{font-family:inherit;}
 .price-card .pc-chg.down{color:#D14343;}
 [data-theme="dark"] .price-card .pc-chg.up{color:#5FD897;}
 [data-theme="dark"] .price-card .pc-chg.down{color:#F08080;}
+
+/* ---------- Dollar spotlight card (enlarged, economy screen) ---------- */
+.dollar-spotlight{
+  position:relative; overflow:hidden; border-radius:22px; padding:22px 20px 20px 20px; margin-bottom:6px;
+  background:linear-gradient(135deg, var(--green-deep), var(--green) 85%);
+  box-shadow:0 18px 40px rgba(15,61,46,0.3); color:#F7F3E9;
+}
+[data-theme="dark"] .dollar-spotlight{color:#F1EEE2;}
+.dollar-spotlight::after{
+  content:''; position:absolute; inset:0; opacity:.5; pointer-events:none;
+  background:radial-gradient(circle at 85% 0%, rgba(212,175,90,0.35), transparent 55%);
+}
+.dollar-spotlight .ds-label{position:relative; font-size:12.5px; font-weight:700; opacity:.85; margin-bottom:8px; display:flex; align-items:center; gap:6px;}
+.dollar-spotlight .ds-label span{font-size:10px; font-weight:600; opacity:.7; direction:ltr;}
+.dollar-spotlight .ds-value{position:relative; font-size:26px; font-weight:800; margin-bottom:8px; direction:ltr; text-align:right;}
+.dollar-spotlight .ds-chg{position:relative; display:inline-flex; align-items:center; gap:4px; font-size:12px; font-weight:700; padding:4px 10px; border-radius:10px; background:rgba(255,255,255,0.14);}
+.dollar-spotlight .ds-chg.up{color:#8CF0B8;}
+.dollar-spotlight .ds-chg.down{color:#FFB4B4;}
+.dollar-spotlight .ds-chg-neutral{position:relative; font-size:11px; opacity:.7;}
+.dollar-spotlight .ds-foot{position:relative; font-size:10px; opacity:.65; margin-top:10px; line-height:1.7;}
 .econ-updated{font-size:10.5px; color:var(--text-sub); text-align:center; margin:6px 0 18px 0;}
 .econ-refresh{display:flex; align-items:center; gap:6px; justify-content:center; font-size:11px; color:var(--green); font-weight:700; cursor:pointer; margin-bottom:16px;}
 .econ-refresh svg{width:14px;height:14px;}
 .econ-refresh.spin svg{animation:spin 0.8s linear infinite;}
 .econ-note{font-size:11px; color:var(--text-sub); line-height:1.8; background:var(--card); border-radius:14px; padding:12px 14px; box-shadow:var(--shadow); margin-top:6px;}
-.navasan-wrap{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:8px; overflow-x:auto; }
-.navasan-wrap table{ width:100%; border-collapse:collapse; font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif; font-size:12.5px; }
-.navasan-wrap td,.navasan-wrap th{ padding:8px 6px; text-align:center; }
-.navasan-wrap tr+tr{ border-top:1px solid rgba(0,0,0,0.06); }
-[data-theme="dark"] .navasan-wrap tr+tr{ border-top:1px solid rgba(255,255,255,0.08); }
 
 /* =========================================================
    NEW: Library (Hawzah books)
 ========================================================= */
 .library-tabs{display:flex; gap:8px; overflow-x:auto; padding-bottom:6px; margin-bottom:14px; -ms-overflow-style:none;}
 .library-tabs::-webkit-scrollbar{display:none;}
+.hawzah-linkcard{
+  display:flex; align-items:center; gap:12px; padding:14px; margin:2px 0 16px 0; border-radius:18px; cursor:pointer;
+  background:linear-gradient(135deg,#1E8A9E,#0D3B44); color:#EAF7F8; box-shadow:var(--shadow); transition:transform .15s ease;
+}
+.hawzah-linkcard:active{transform:scale(0.97);}
+.hawzah-lc-icon{width:42px;height:42px;min-width:42px;border-radius:13px; background:rgba(255,255,255,0.18); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+.hawzah-lc-icon svg{width:20px;height:20px;}
+.hawzah-lc-text{flex:1; min-width:0;}
+.hawzah-lc-title{font-size:13.5px; font-weight:700;}
+.hawzah-lc-sub{font-size:10.5px; opacity:.85; margin-top:2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.hawzah-lc-arrow{width:16px;height:16px; flex-shrink:0; opacity:.8; transform:scaleX(-1);}
 .grade-chip{
   flex-shrink:0; padding:9px 16px; border-radius:14px; background:var(--card); box-shadow:var(--shadow);
   font-size:12px; font-weight:700; color:var(--text-sub); cursor:pointer; white-space:nowrap; border:1.5px solid transparent;
@@ -748,7 +865,53 @@ h1,h2,h3,h4,p{font-family:inherit;}
 .lib-search input{border:none; outline:none; background:transparent; font-family:inherit; font-size:13px; color:var(--text-main); flex:1; min-width:0;}
 .lib-count{font-size:11px; color:var(--text-sub); margin-bottom:12px;}
 .lib-group-title{font-size:12.5px; font-weight:700; color:var(--green); margin:16px 2px 10px 2px;}
+
+/* =========================================================
+   NEW: SEARCH ASSISTANT (floating button -> Google search)
+========================================================= */
+.search-fab{
+  position:fixed; left:16px; bottom:calc(60px + 16px + 14px); z-index:120;
+  width:52px; height:52px; border-radius:50%; border:none; cursor:pointer;
+  background:linear-gradient(155deg,var(--green),var(--green-deep));
+  box-shadow:0 10px 24px rgba(15,61,46,0.35), inset 0 0 0 1px rgba(255,255,255,0.15);
+  display:flex; align-items:center; justify-content:center; color:var(--gold-soft);
+  animation:searchFabFloat 3.4s ease-in-out infinite;
+}
+.search-fab svg{width:22px;height:22px;}
+@keyframes searchFabFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media (prefers-reduced-motion: reduce){ .search-fab{animation:none;} }
+
+.search-overlay{
+  position:fixed; inset:0; background:rgba(10,20,15,0.45); z-index:198;
+  opacity:0; pointer-events:none; transition:opacity .3s ease; backdrop-filter:blur(2px);
+}
+.search-overlay.show{opacity:1; pointer-events:auto;}
+
+.search-panel{
+  position:fixed; left:0; right:0; bottom:0; z-index:199; max-width:480px; margin:0 auto;
+  border-radius:24px 24px 0 0;
+  background:rgba(253,251,245,0.92); backdrop-filter:blur(22px) saturate(170%); -webkit-backdrop-filter:blur(22px) saturate(170%);
+  box-shadow:0 -14px 40px rgba(0,0,0,0.25); border:1px solid rgba(255,255,255,0.5); border-bottom:none;
+  transform:translateY(105%); transition:transform .32s cubic-bezier(.2,.85,.25,1);
+  padding:18px 18px calc(20px + env(safe-area-inset-bottom)) 18px;
+}
+[data-theme="dark"] .search-panel{ background:rgba(18,32,26,0.9); border-color:rgba(255,255,255,0.08); }
+.search-panel.show{transform:translateY(0);}
+.search-head{display:flex; align-items:center; gap:10px; margin-bottom:14px;}
+.search-head .sh-icon{width:34px;height:34px;border-radius:11px; background:linear-gradient(155deg,var(--green),var(--green-deep)); display:flex; align-items:center; justify-content:center; color:var(--gold-soft); flex-shrink:0;}
+.search-head .sh-icon svg{width:18px;height:18px;}
+.search-head h4{margin:0; font-size:13.5px; font-weight:700;}
+.search-head p{margin:1px 0 0 0; font-size:10.5px; color:var(--text-sub);}
+.search-close{margin-right:auto; margin-left:0; width:32px;height:32px;border-radius:10px; border:none; background:var(--card); box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; color:var(--text-sub); cursor:pointer;}
+.search-close svg{width:15px;height:15px;}
+.search-row{display:flex; align-items:center; gap:8px;}
+.search-row input{flex:1; min-width:0; border:1px solid var(--sage); background:var(--card); border-radius:14px; padding:13px 15px; font-family:inherit; font-size:13px; color:var(--text-main); outline:none;}
+.search-go{width:46px;height:46px;border-radius:13px; border:none; background:linear-gradient(135deg,var(--green),var(--green-deep)); color:#F7F3E9; display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0;}
+[data-theme="dark"] .search-go{color:#0F1A15;}
+.search-go svg{width:19px;height:19px;}
+.search-hint{font-size:10.5px; color:var(--text-sub); margin-top:10px; line-height:1.8;}
 </style>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 
@@ -759,17 +922,29 @@ h1,h2,h3,h4,p{font-family:inherit;}
       <div class="ring"></div>
       <div class="core">
         <svg viewBox="0 0 64 64" fill="none">
-          <path d="M14 55V38C14 24 22 14 32 14C42 14 50 24 50 38V55Z" fill="url(#logoDomeFillOb)" stroke="#F0DFA8" stroke-width="1.4"/>
-          <path d="M32 14C24 14 18 22 16 32C20 22 26 17 32 17C38 17 44 22 48 32C46 22 40 14 32 14Z" fill="#7FE3B4" opacity="0.55"/>
-          <rect x="31" y="2" width="2" height="13" rx="1" fill="#F0DFA8"/>
-          <path d="M33 3.5H43L39.5 7L43 10.5H33Z" fill="#F0DFA8"/>
-          <defs><linearGradient id="logoDomeFillOb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3EAE7C"/><stop offset="100%" stop-color="#0A3527"/></linearGradient></defs>
+          <path d="M32 6C22 6 14 16 14 28V33H50V28C50 16 42 6 32 6Z" fill="none" stroke="url(#archGradOb)" stroke-width="2"/>
+          <path d="M32 6L32 14" stroke="url(#archGradOb)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M11 46C11 46 21 40 32 43C43 40 53 46 53 46V51C53 51 43 45 32 48C21 45 11 51 11 51Z" fill="url(#logoDomeFillOb)" stroke="url(#archGradOb)" stroke-width="1"/>
+          <path d="M32 43V19" stroke="url(#archGradOb)" stroke-width="1.3" opacity="0.7"/>
+          <defs>
+            <linearGradient id="logoDomeFillOb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3EAE7C"/><stop offset="100%" stop-color="#0A3527"/></linearGradient>
+            <linearGradient id="archGradOb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F5E3AE"/><stop offset="100%" stop-color="#C9A24B"/></linearGradient>
+          </defs>
         </svg>
       </div>
       <div class="spark"></div>
     </div>
-    <h1 class="ob-title">به حوزه یار خوش آمدید</h1>
+    <h1 class="ob-title">به طلبه یار خوش آمدید</h1>
     <p class="ob-sub">پیش از ورود، کمی درباره خودتان بگویید تا پروفایل شما ساخته شود. اطلاعات شما فقط روی همین دستگاه ذخیره می‌شود.</p>
+
+    <div class="ob-google-card" id="obGoogleWrap">
+      <div class="ob-google-inner">
+        <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h11.8c-.5 2.7-2.1 5-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.6z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.7-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.4-1.3-.7-2.7-.7-4.1s.2-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.5 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.7c3.3 0 6.2 1.1 8.5 3.4l6.3-6.3C34.9 4.3 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.7-5.2 6.6-9.2 12.4-9.2z"/></svg>
+        <div><b>ثبت‌نام سریع با گوگل</b><span>پروفایل خودکار ساخته می‌شود</span></div>
+      </div>
+      <div id="obGoogleBtnContainer"></div>
+    </div>
+    <div class="ob-divider"><span>یا با فرم زیر ثبت‌نام کنید</span></div>
 
     <div class="ob-avatarpick">
       <div class="av-big" id="obAvatarPreview"></div>
@@ -789,7 +964,7 @@ h1,h2,h3,h4,p{font-family:inherit;}
     </div>
 
     <div class="ob-actions">
-      <button class="btn-primary" onclick="completeOnboarding()">ورود به حوزه یار</button>
+      <button class="btn-primary" onclick="completeOnboarding()">ورود به طلبه یار</button>
       <button class="ob-skip" onclick="completeOnboarding(true)">فعلاً رد شوم</button>
     </div>
   </div>
@@ -802,7 +977,7 @@ h1,h2,h3,h4,p{font-family:inherit;}
   <div class="sd-profile" onclick="closeDrawer(); go('profile');">
     <div class="av-mini" id="drawerAvatar"></div>
     <div>
-      <h4 id="drawerName">کاربر حوزه یار</h4>
+      <h4 id="drawerName">کاربر طلبه یار</h4>
       <p>مشاهده و ویرایش پروفایل</p>
     </div>
   </div>
@@ -857,7 +1032,7 @@ h1,h2,h3,h4,p{font-family:inherit;}
   </div>
   <div class="sd-item" onclick="closeDrawer(); showAbout();">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-    <span>درباره حوزه یار</span>
+    <span>درباره طلبه یار</span>
     <svg class="sd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
   </div>
 </nav>
@@ -877,19 +1052,17 @@ h1,h2,h3,h4,p{font-family:inherit;}
           <stop offset="0%" stop-color="#F0DFA8" stop-opacity="0.85"/><stop offset="100%" stop-color="#F0DFA8" stop-opacity="0"/>
         </radialGradient>
       </defs>
-      <rect x="1" y="1" width="62" height="62" rx="18" fill="#FDF9EC"/>
-      <circle cx="32" cy="24" r="20" fill="url(#archGlowSplash)"/>
-      <rect x="9" y="32" width="4" height="21" rx="2" fill="url(#domeGradSplash)" opacity="0.6"/>
-      <path d="M9 32 L9 27 L11 23 L13 27 L13 32Z" fill="url(#domeGradSplash)" opacity="0.6"/>
-      <rect x="51" y="32" width="4" height="21" rx="2" fill="url(#domeGradSplash)" opacity="0.6"/>
-      <path d="M51 32 L51 27 L53 23 L55 27 L55 32Z" fill="url(#domeGradSplash)" opacity="0.6"/>
-      <path d="M14 55V38C14 24 22 14 32 14C42 14 50 24 50 38V55Z" fill="url(#domeGradSplash)" stroke="url(#goldGradSplash)" stroke-width="1.1"/>
-      <path d="M32 14C24 14 18 22 16 32C20 22 26 17 32 17C38 17 44 22 48 32C46 22 40 14 32 14Z" fill="#3EAE7C" opacity="0.55"/>
-      <g class="flagpole"><rect x="31" y="2" width="2" height="13" rx="1" fill="url(#goldGradSplash)"/><path d="M33 3.5H44L40 7L44 10.5H33Z" fill="url(#domeGradSplash)"/></g>
+      <rect x="1" y="1" width="62" height="62" rx="18" fill="#0B241C"/>
+      <circle cx="32" cy="24" r="20" fill="url(#archGlowSplash)" opacity="0.5"/>
+      <path d="M32 8C22 8 15 17 15 27V32H49V27C49 17 42 8 32 8Z" fill="none" stroke="url(#goldGradSplash)" stroke-width="2"/>
+      <path d="M32 8L32 15" stroke="url(#goldGradSplash)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12 46C12 46 22 40 32 43C42 40 52 46 52 46V51C52 51 42 45 32 48C22 45 12 51 12 51Z" fill="url(#domeGradSplash)" stroke="url(#goldGradSplash)" stroke-width="1"/>
+      <path d="M32 43V19" stroke="url(#goldGradSplash)" stroke-width="1.3" opacity="0.75"/>
     </svg>
   </div>
-  <div class="splash-title">حوزه یار</div>
-  <div class="splash-sub">همراه همیشگی شما در مسیر معنویت</div>
+  <div class="splash-title">طلبه یار</div>
+  <div class="splash-sub" style="letter-spacing:2px; font-size:10.5px; opacity:.7; margin-top:-6px;">TALABE YAR</div>
+  <div class="splash-sub">همراه همیشگی شما در مسیر طلبگی</div>
   <div class="splash-loader"></div>
 </div>
 <div class="arch-bg"><div class="ray"></div><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div></div>
@@ -903,13 +1076,16 @@ h1,h2,h3,h4,p{font-family:inherit;}
           <div class="ring"></div>
           <div class="core">
             <svg viewBox="0 0 64 64" fill="none">
-              <path d="M14 55V38C14 24 22 14 32 14C42 14 50 24 50 38V55Z" fill="url(#logoDomeFill)" stroke="#F0DFA8" stroke-width="1.4"/>
-              <path d="M32 14C24 14 18 22 16 32C20 22 26 17 32 17C38 17 44 22 48 32C46 22 40 14 32 14Z" fill="#7FE3B4" opacity="0.55"/>
-              <rect x="31" y="2" width="2" height="13" rx="1" fill="#F0DFA8"/>
-              <path d="M33 3.5H43L39.5 7L43 10.5H33Z" fill="#F0DFA8"/>
+              <path d="M32 6C22 6 14 16 14 28V33H50V28C50 16 42 6 32 6Z" fill="none" stroke="url(#archGradHdr)" stroke-width="2"/>
+              <path d="M32 6L32 14" stroke="url(#archGradHdr)" stroke-width="2" stroke-linecap="round"/>
+              <path d="M11 46C11 46 21 40 32 43C43 40 53 46 53 46V51C53 51 43 45 32 48C21 45 11 51 11 51Z" fill="url(#logoDomeFill)" stroke="url(#archGradHdr)" stroke-width="1"/>
+              <path d="M32 43V19" stroke="url(#archGradHdr)" stroke-width="1.3" opacity="0.75"/>
               <defs>
                 <linearGradient id="logoDomeFill" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0%" stop-color="#3EAE7C"/><stop offset="100%" stop-color="#0A3527"/>
+                </linearGradient>
+                <linearGradient id="archGradHdr" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#F5E3AE"/><stop offset="100%" stop-color="#C9A24B"/>
                 </linearGradient>
               </defs>
             </svg>
@@ -917,8 +1093,8 @@ h1,h2,h3,h4,p{font-family:inherit;}
           <div class="spark"></div>
         </div>
         <div class="brand-text">
-          <div class="t1">حوزه یار</div>
-          <div class="t2">همراه همیشگی شما در مسیر معنویت</div>
+          <div class="t1">طلبه یار <span style="font-size:9.5px; font-weight:500; color:var(--text-sub); letter-spacing:.5px;">TALABE YAR</span></div>
+          <div class="t2">همراه همیشگی شما در مسیر طلبگی</div>
         </div>
       </div>
       <button class="dots-btn" onclick="openDrawer()" aria-label="منو">
@@ -934,7 +1110,7 @@ h1,h2,h3,h4,p{font-family:inherit;}
     <div class="greeting">
       <div class="greeting-top">
         <div>
-          <h1 id="greetText">سلام، به حوزه یار خوش آمدید</h1>
+          <h1 id="greetText">سلام، به طلبه یار خوش آمدید</h1>
           <p id="greetSub">موسیقی خودتان را پخش کنید، به اخبار معتبر دسترسی داشته باشید و آرامش را همراه خود ببرید.</p>
         </div>
         <div class="greeting-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-5 7 5M5 8v11a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V8"/></svg></div>
@@ -946,54 +1122,134 @@ h1,h2,h3,h4,p{font-family:inherit;}
       </div>
     </div>
 
+    <div class="hadith-of-day" id="hadithOfDay"></div>
+
+    <div class="quicknav-strip">
+      <div class="quicknav-track" id="quicknavTrack"></div>
+    </div>
+
+    <div class="section-title">دسترسی سریع</div>
+    <div class="card-grid">
+      <div class="feature-card accent-gold" onclick="go('music')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>پخش موسیقی و مداحی</h3>
+        <p>موسیقی‌های دستگاه شما</p>
+      </div>
+      <div class="feature-card accent-blue" onclick="go('news')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6z"/></svg></div>
+        <h3>اخبار</h3>
+        <p>منابع خبری معتبر</p>
+      </div>
+      <div class="feature-card accent-teal" onclick="go('library')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/><path d="M6.5 17H20v3H6.5A2.5 2.5 0 014 17.5"/></svg></div>
+        <h3>کتابخانه حوزه</h3>
+        <p>کتاب‌های پایه ۱ تا ۶ و نظام قدیم</p>
+      </div>
+      <div class="feature-card accent-violet" onclick="go('economy')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>اقتصاد</h3>
+        <p>طلا، دلار، سکه و ارز دیجیتال</p>
+      </div>
+    </div>
+
+    <div class="section-title">حساب کاربری</div>
+    <div class="card-grid">
+      <div class="feature-card" onclick="go('profile')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>پروفایل</h3>
+        <p>مدیریت حساب و تنظیمات</p>
+      </div>
+      <div class="feature-card" onclick="openDrawer()">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+        <h3>تنظیمات</h3>
+        <p>شخصی‌سازی برنامه</p>
+      </div>
+    </div>
+
     <div class="section-title">معنویت روزانه</div>
     <div class="card-grid">
       <div class="feature-card accent-gold" onclick="go('quran')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/><path d="M6.5 17H20v3H6.5A2.5 2.5 0 014 17.5"/></svg></div>
         <h3>قرآن روزانه</h3>
-        <p>کتابخوان دیجیتال ورق‌خور</p>
+        <p>تلاوت جزء به جزء</p>
       </div>
       <div class="feature-card" onclick="go('sayings')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
         <h3>سخن زیبا</h3>
         <p>روایات نورانی اهل‌بیت</p>
       </div>
-      <div class="feature-card" onclick="go('imams')">
+      <div class="feature-card accent-wine" onclick="go('imams')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/></svg></div>
         <h3>چهارده معصوم</h3>
         <p>زندگی‌نامه ائمه اطهار</p>
       </div>
       <div class="feature-card" onclick="go('music')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-        <h3>مداحی و صوت</h3>
+        <h3>موسیقی و مداحی</h3>
         <p>کتابخانه صوتی شما</p>
       </div>
     </div>
 
     <div class="section-title">اخیراً پخش شده</div>
     <div class="list-card" id="homeRecentList"></div>
+  </section>
 
-    <div class="section-title">دسترسی سریع</div>
+  <!-- ===================== TOOLS / امکانات ===================== -->
+  <section class="screen" id="screen-tools">
+    <div class="topbar">
+      <div class="brand"><div class="brand-text"><div class="t1" id="toolsTitleText" style="font-size:18px;">امکانات</div><div class="t2" id="toolsSubText">همه ابزارها و بخش‌های طلبه یار</div></div></div>
+      <div style="width:40px;"></div>
+    </div>
+
+    <div class="section-title" style="margin-top:0;">مطالعه و معارف</div>
     <div class="card-grid">
-      <div class="feature-card" onclick="go('library')">
+      <div class="feature-card accent-gold" onclick="go('quran')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg></div>
+        <h3>قرآن</h3><p>تلاوت جزء به جزء</p>
+      </div>
+      <div class="feature-card" onclick="go('sayings')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>سخن زیبا</h3><p>روایات نورانی</p>
+      </div>
+      <div class="feature-card accent-wine" onclick="go('imams')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/></svg></div>
+        <h3>چهارده معصوم</h3><p>زندگی‌نامه ائمه اطهار</p>
+      </div>
+      <div class="feature-card accent-teal" onclick="go('library')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/><path d="M6.5 17H20v3H6.5A2.5 2.5 0 014 17.5"/></svg></div>
-        <h3>کتابخانه حوزه</h3>
-        <p>کتاب‌های پایه ۱ تا ۶ و نظام قدیم</p>
+        <h3>کتابخانه حوزه</h3><p>کتب درسی پایه‌ها</p>
       </div>
-      <div class="feature-card" onclick="go('news')">
-        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6z"/></svg></div>
-        <h3>اخبار</h3>
-        <p>منابع خبری معتبر</p>
+    </div>
+
+    <div class="section-title">اخبار و اقتصاد</div>
+    <div class="card-grid">
+      <div class="feature-card accent-blue" onclick="go('news')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/></svg></div>
+        <h3>اخبار</h3><p>منابع خبری معتبر</p>
       </div>
-      <div class="feature-card" onclick="go('economy')">
+      <div class="feature-card accent-violet" onclick="go('economy')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <h3>اقتصاد</h3>
-        <p>طلا، دلار، سکه و ارز دیجیتال</p>
+        <h3>اقتصاد</h3><p>قیمت لحظه‌ای دلار</p>
       </div>
+    </div>
+
+    <div class="section-title">صوت و مداحی</div>
+    <div class="card-grid">
+      <div class="feature-card accent-gold" onclick="go('music')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>موسیقی و مداحی</h3><p>پخش برخط و کتابخانه شما</p>
+      </div>
+    </div>
+
+    <div class="section-title">حساب و تنظیمات</div>
+    <div class="card-grid">
       <div class="feature-card" onclick="go('profile')">
         <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <h3>پروفایل</h3>
-        <p>مدیریت حساب و تنظیمات</p>
+        <h3>پروفایل</h3><p>مدیریت حساب</p>
+      </div>
+      <div class="feature-card" onclick="go('settings')">
+        <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>تنظیمات</h3><p>ظاهر، زبان و شخصی‌سازی</p>
       </div>
     </div>
   </section>
@@ -1023,8 +1279,15 @@ h1,h2,h3,h4,p{font-family:inherit;}
   <section class="screen" id="screen-sayings">
     <div class="topbar">
       <button class="icon-btn" onclick="go('home')" aria-label="بازگشت"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
-      <div class="brand-text" style="text-align:center;"><div class="t1" style="font-size:18px;">سخن زیبا</div><div class="t2">روایات نورانی از پیامبر و اهل‌بیت</div></div>
+      <div class="brand-text" style="text-align:center;"><div class="t1" style="font-size:18px;">سخن زیبا</div><div class="t2">روایات نورانی و کلام بزرگان</div></div>
       <div style="width:40px;"></div>
+    </div>
+    <div class="seg-control" style="margin:0 0 16px 0; overflow-x:auto; white-space:nowrap; display:flex;">
+      <button class="active" data-cat="all" onclick="setSayingCat('all')">همه</button>
+      <button data-cat="nabi" onclick="setSayingCat('nabi')">پیامبر(ص)</button>
+      <button data-cat="aimma" onclick="setSayingCat('aimma')">ائمه(ع)</button>
+      <button data-cat="rahbar" onclick="setSayingCat('rahbar')">رهبری</button>
+      <button data-cat="shahid" onclick="setSayingCat('shahid')">شهدا</button>
     </div>
     <div id="sayingsList"></div>
   </section>
@@ -1066,10 +1329,24 @@ h1,h2,h3,h4,p{font-family:inherit;}
     <input type="file" id="filePicker" class="hidden-input" accept="audio/*" multiple onchange="handleFiles(event)">
     <input type="file" id="folderPicker" class="hidden-input" accept="audio/*" multiple webkitdirectory directory onchange="handleFiles(event)">
 
-    <div class="section-title" style="margin-top:0;">پخش برخط مداحی</div>
-    <div class="list-card" id="onlineMaddahList"></div>
+    <div class="section-title" style="margin-top:0;">پخش برخط مداحی — کاشوب</div>
+    <div class="kashoob-toolbar">
+      <button class="kt-btn" onclick="toggleKashoobSize()" id="kashoobExpandBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3M3 16v3a2 2 0 002 2h3m11 0h3a2 2 0 002-2v-3"/></svg><span>بزرگ‌نمایی</span></button>
+      <button class="kt-btn" onclick="toggleKashoobVisible()" id="kashoobHideBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0112 20c-7 0-11-8-11-8a19.7 19.7 0 015.06-5.94M9.9 4.24A10.94 10.94 0 0112 4c7 0 11 8 11 8a19.7 19.7 0 01-2.16 3.19M14.12 14.12a3 3 0 11-4.24-4.24M1 1l22 22"/></svg><span>مخفی کردن</span></button>
+    </div>
+    <div class="kashoob-embed-wrap" id="kashoobWrap">
+      <iframe id="kashoobFrame" src="https://kashoob.com/audios/type/madahi/" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p style="font-size:10.5px; color:var(--text-sub); margin:8px 2px 16px 2px;">این بخش صفحه‌ی مداحی سایت کاشوب را به‌صورت زنده نمایش می‌دهد. اگر به هر دلیل بارگذاری نشد، <a href="https://kashoob.com/audios/type/madahi/" target="_blank" style="color:var(--green); font-weight:700;">اینجا</a> در تب جدید باز کنید.</p>
 
     <div class="section-title">کتابخانه دستگاه شما</div>
+    <div class="add-music-banner">
+      <div class="amb-text"><h4>موسیقی‌های خودتان را اضافه کنید</h4><p>فایل تکی یا کل یک پوشه را انتخاب کنید</p></div>
+      <div class="amb-actions">
+        <label class="amb-btn primary" for="filePicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>افزودن فایل</label>
+        <label class="amb-btn" for="folderPicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>افزودن پوشه</label>
+      </div>
+    </div>
     <div class="seg-control" style="margin:0 0 14px 0;">
       <button class="active" data-tab="all" onclick="setMusicTab('all')">همه</button>
       <button data-tab="recent" onclick="setMusicTab('recent')">اخیراً پخش شده</button>
@@ -1106,7 +1383,7 @@ h1,h2,h3,h4,p{font-family:inherit;}
     <div id="newsList"></div>
 
     <div class="empty-state" style="padding-top:8px;">
-      <p>با تپ روی هر منبع، آخرین اخبار آن در مرورگر باز می‌شود. حوزه یار محتوای خبری را ذخیره یا بازتولید نمی‌کند.</p>
+      <p>با تپ روی هر منبع، آخرین اخبار آن در مرورگر باز می‌شود. طلبه یار محتوای خبری را ذخیره یا بازتولید نمی‌کند.</p>
     </div>
   </section>
 
@@ -1124,15 +1401,12 @@ h1,h2,h3,h4,p{font-family:inherit;}
     </div>
     <div class="econ-updated" id="econUpdated">در حال دریافت آخرین قیمت‌ها...</div>
 
-    <div class="section-title">طلا، سکه و ارز (زنده — نوسان)</div>
-    <div id="navasan_table_container" class="navasan-wrap"></div>
-    <script>function navasanret(data){document.getElementById('navasan_table_container').innerHTML=JSON.parse(data)}</script>
-    <script src="https://www.navasan.tech/wp-navasan.php?usd&eur&gbp&aed&try&jpy&cny&xau&18ayar&sekkeh&bahar&nim&rob&gerami"></script>
+    <div class="dollar-spotlight" id="dollarSpotlight"></div>
 
-    <div class="section-title">ارز دیجیتال</div>
-    <div class="price-grid" id="cryptoPriceGrid"></div>
+    <div class="section-title">طلا و سکه</div>
+    <div class="price-grid" id="goldPriceGrid"></div>
 
-    <div class="econ-note">قیمت طلا، سکه و ارز به‌صورت زنده از ویجت رسمی <a href="https://www.navasan.tech" target="_blank" rel="noopener" style="color:inherit;">نوسان (navasan.tech)</a> نمایش داده می‌شود و ارز دیجیتال از CoinGecko دریافت می‌گردد. این بخش صرفاً جنبه اطلاع‌رسانی دارد و توصیه مالی محسوب نمی‌شود.</div>
+    <div class="econ-note">قیمت‌ها به‌صورت زنده از منابع آنلاین عمومی دریافت می‌شوند و ممکن است با نرخ صرافی‌های محلی اندکی تفاوت داشته باشد. این بخش صرفاً جنبه اطلاع‌رسانی دارد و توصیه مالی محسوب نمی‌شود.</div>
   </section>
 
   <!-- ===================== LIBRARY ===================== -->
@@ -1142,6 +1416,16 @@ h1,h2,h3,h4,p{font-family:inherit;}
       <div class="brand-text" style="text-align:center;"><div class="t1" style="font-size:18px;">کتابخانه حوزه</div><div class="t2">کتب درسی پایه‌ها و نظام قدیم</div></div>
       <div style="width:40px;"></div>
     </div>
+
+    <div class="section-title" style="margin-top:0;">کتابخانه آنلاین حوزه</div>
+    <div class="kashoob-toolbar">
+      <button class="kt-btn" onclick="toggleHawzahSize()" id="hawzahExpandBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3M3 16v3a2 2 0 002 2h3m11 0h3a2 2 0 002-2v-3"/></svg><span>بزرگ‌نمایی</span></button>
+      <button class="kt-btn" onclick="toggleHawzahVisible()" id="hawzahHideBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0112 20c-7 0-11-8-11-8a19.7 19.7 0 015.06-5.94M9.9 4.24A10.94 10.94 0 0112 4c7 0 11 8 11 8a19.7 19.7 0 01-2.16 3.19M14.12 14.12a3 3 0 11-4.24-4.24M1 1l22 22"/></svg><span>مخفی کردن</span></button>
+    </div>
+    <div class="kashoob-embed-wrap" id="hawzahWrap">
+      <iframe id="hawzahFrame" src="https://onlinehawzah.com" loading="lazy" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+    </div>
+    <p style="font-size:10.5px; color:var(--text-sub); margin:8px 2px 16px 2px;">این بخش سایت کتابخانه آنلاین حوزه را به‌طور مستقیم همین‌جا نمایش می‌دهد. اگر صفحه سفید ماند، سایت مقصد اجازه‌ی نمایش داخل برنامه را نداده — در این صورت <a href="https://onlinehawzah.com" target="_blank" style="color:var(--green); font-weight:700;">اینجا</a> در تب جدید باز می‌شود.</p>
 
     <div class="lib-search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
@@ -1164,11 +1448,26 @@ h1,h2,h3,h4,p{font-family:inherit;}
       </button>
     </div>
 
-    <div class="profile-head">
+    <div class="profile-head" id="profileHead">
       <div class="avatar" id="avatarInitial"></div>
-      <h2 id="profileName">کاربر حوزه یار</h2>
-      <p>پروفایل محلی — بدون نیاز به ثبت‌نام</p>
-      <button class="btn-ghost" style="margin-top:14px;" onclick="editProfile()">ویرایش پروفایل</button>
+      <h2 id="profileName">کاربر طلبه یار</h2>
+      <p id="profileSubText">پروفایل محلی — بدون نیاز به ثبت‌نام</p>
+      <p id="profileBioText" class="profile-bio"></p>
+      <div id="googleSigninWrap" style="margin-top:14px;"></div>
+      <button class="btn-ghost" style="margin-top:10px;" onclick="editProfile()">ویرایش پروفایل</button>
+    </div>
+
+    <div class="section-title">شخصی‌سازی پروفایل</div>
+    <div class="list-card" style="padding:16px;">
+      <div class="pc-field">
+        <label>بیوگرافی کوتاه</label>
+        <textarea id="profileBioInput" rows="2" placeholder="چند کلمه درباره خودتان بنویسید..."></textarea>
+      </div>
+      <div class="pc-field">
+        <label>رنگ کاور پروفایل</label>
+        <div class="profile-cover-swatches" id="profileCoverSwatches"></div>
+      </div>
+      <button class="btn-primary" style="width:100%; margin-top:6px;" onclick="saveProfileCustomization()">ذخیره شخصی‌سازی</button>
     </div>
 
     <div class="section-title">دسترسی سریع</div>
@@ -1190,17 +1489,17 @@ h1,h2,h3,h4,p{font-family:inherit;}
       </div>
       <div class="row" onclick="shareApp()">
         <div class="row-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></div>
-        <div class="row-info"><div class="r1">اشتراک‌گذاری حوزه یار</div><div class="r2">معرفی برنامه به دیگران</div></div>
+        <div class="row-info"><div class="r1">اشتراک‌گذاری طلبه یار</div><div class="r2">معرفی برنامه به دیگران</div></div>
         <div class="row-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></div>
       </div>
       <div class="row" onclick="reportProblem()">
         <div class="row-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
-        <div class="row-info"><div class="r1">گزارش مشکل / پیشنهاد</div><div class="r2">ارسال بازخورد به تیم حوزه یار</div></div>
+        <div class="row-info"><div class="r1">گزارش مشکل / پیشنهاد</div><div class="r2">ارسال بازخورد به تیم طلبه یار</div></div>
         <div class="row-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></div>
       </div>
       <div class="row" onclick="showAbout()">
         <div class="row-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div>
-        <div class="row-info"><div class="r1">درباره حوزه یار</div><div class="r2">نسخه ۱.۰.۰</div></div>
+        <div class="row-info"><div class="r1">درباره طلبه یار</div><div class="r2">نسخه ۱.۰.۰</div></div>
         <div class="row-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></div>
       </div>
     </div>
@@ -1212,19 +1511,29 @@ h1,h2,h3,h4,p{font-family:inherit;}
       <button class="icon-btn" onclick="go('profile')" aria-label="بازگشت">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
       </button>
-      <div class="brand-text" style="text-align:center;"><div class="t1" style="font-size:18px;">تنظیمات</div></div>
+      <div class="brand-text" style="text-align:center;"><div class="t1" id="settingsTitleText" style="font-size:18px;">تنظیمات</div></div>
       <div style="width:40px;"></div>
     </div>
 
     <div class="settings-group">
       <div class="sg-title">ظاهر برنامه</div>
       <div class="seg-control">
-        <button id="themeBtn-light" class="active" onclick="setTheme('light')">روشن</button>
-        <button id="themeBtn-dark" onclick="setTheme('dark')">تیره</button>
+        <button id="themeBtn-light" onclick="setTheme('light')">روشن</button>
+        <button id="themeBtn-dark" class="active" onclick="setTheme('dark')">تیره</button>
         <button id="themeBtn-system" onclick="setTheme('system')">سیستم</button>
       </div>
       <div class="sg-title">رنگ اصلی برنامه</div>
       <div class="accent-swatches" id="accentSwatches"></div>
+    </div>
+
+    <div class="settings-group">
+      <div class="sg-title">زبان برنامه</div>
+      <div class="seg-control">
+        <button id="langBtn-fa" onclick="setAppLang('fa')">فارسی</button>
+        <button id="langBtn-ar" onclick="setAppLang('ar')">العربیة</button>
+        <button id="langBtn-en" onclick="setAppLang('en')">English</button>
+      </div>
+      <p style="font-size:10.5px; color:var(--text-sub); margin:8px 2px 0 2px; line-height:1.8;">تغییر زبان روی عناوین اصلی و منوها اعمال می‌شود. متن قرآن و روایات همیشه به زبان اصلی خود باقی می‌ماند.</p>
     </div>
 
     <div class="settings-group">
@@ -1257,7 +1566,7 @@ h1,h2,h3,h4,p{font-family:inherit;}
 
     <div class="settings-group">
       <div class="sg-title">درباره برنامه</div>
-      <div class="row" onclick="showAbout()"><div class="row-info"><div class="r1">درباره حوزه یار</div><div class="r2">نسخه ۱.۰.۰</div></div><div class="row-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></div></div>
+      <div class="row" onclick="showAbout()"><div class="row-info"><div class="r1">درباره طلبه یار</div><div class="r2">نسخه ۱.۰.۰</div></div><div class="row-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></div></div>
       <div class="row" onclick="shareApp()" style="border-top:1px solid var(--cream-deep);"><div class="row-info"><div class="r1">اشتراک‌گذاری برنامه</div></div><div class="row-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></div></div>
       <div class="row" onclick="reportProblem()" style="border-top:1px solid var(--cream-deep);"><div class="row-info"><div class="r1">گزارش مشکل</div></div><div class="row-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></div></div>
     </div>
@@ -1265,21 +1574,21 @@ h1,h2,h3,h4,p{font-family:inherit;}
 
   <!-- ===================== BOTTOM NAV ===================== -->
   <nav class="bottom-nav">
-    <button class="nav-item active" data-screen="home" onclick="go('home')">
+    <button class="nav-item" data-screen="profile" onclick="go('profile')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>پروفایل</span>
+    </button>
+    <button class="nav-item" data-screen="tools" onclick="go('tools')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      <span>امکانات</span>
+    </button>
+    <button class="nav-item nav-home active" data-screen="home" onclick="go('home')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
       <span>خانه</span>
     </button>
     <button class="nav-item" data-screen="music" onclick="go('music')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
       <span>موسیقی</span>
-    </button>
-    <button class="nav-item" data-screen="news" onclick="go('news')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/></svg>
-      <span>اخبار</span>
-    </button>
-    <button class="nav-item" data-screen="profile" onclick="go('profile')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      <span>پروفایل</span>
     </button>
   </nav>
 
@@ -1329,6 +1638,25 @@ h1,h2,h3,h4,p{font-family:inherit;}
   </div>
 
   <div class="toast" id="toast"></div>
+
+  <!-- ===================== SEARCH (Google redirect) ===================== -->
+  <button class="search-fab" id="searchFab" onclick="openSearchPanel()" aria-label="جست‌وجوی سؤال">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+  </button>
+
+  <div class="search-overlay" id="searchOverlay" onclick="closeSearchPanel()"></div>
+  <div class="search-panel" id="searchPanel">
+    <div class="search-head">
+      <div class="sh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+      <div><h4>جست‌وجوی سؤال</h4><p>سؤال خود را بنویسید تا در گوگل جست‌وجو شود</p></div>
+      <button class="search-close" onclick="closeSearchPanel()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="search-row">
+      <input type="text" id="searchInput" placeholder="مثلاً: حکم غسل جنابت..." onkeydown="if(event.key==='Enter') runGoogleSearch()">
+      <button class="search-go" onclick="runGoogleSearch()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <p class="search-hint">با تپ روی جست‌وجو، سؤال شما در تب جدید مرورگر روی گوگل جست‌وجو می‌شود. طلبه یار پاسخ شرعی تولید نمی‌کند؛ همیشه از منابع رسمی مرجع خود مطمئن شوید.</p>
+  </div>
 </div>
 
 <audio id="audioEl"></audio>
@@ -1374,8 +1702,8 @@ document.addEventListener('click', (e)=>{
 let library = JSON.parse(localStorage.getItem('hy_library') || '[]'); // metadata only (name,size,lastModified persisted; blob not persisted across reload)
 let favorites = new Set(JSON.parse(localStorage.getItem('hy_favorites') || '[]'));
 let recentIds = JSON.parse(localStorage.getItem('hy_recent') || '[]');
-let profileName = localStorage.getItem('hy_profile_name') || 'کاربر حوزه یار';
-let themeMode = localStorage.getItem('hy_theme') || 'light';
+let profileName = localStorage.getItem('hy_profile_name') || 'کاربر طلبه یار';
+let themeMode = localStorage.getItem('hy_theme') || 'dark';
 let musicTab = 'all';
 let queue = [];
 let currentIndex = -1;
@@ -1388,6 +1716,92 @@ let sleepIdx = 0;
 const audio = document.getElementById('audioEl');
 document.getElementById('profileName').textContent = profileName;
 document.getElementById('avatarInitial').innerHTML = TALABEH_AVATAR_SVG;
+
+/* ============ GOOGLE SIGN-IN ============
+   Configure your OAuth Client ID below. This value is public by design
+   (Google Identity Services requires it client-side) — never put the
+   Client SECRET here, it is not needed for this sign-in flow.
+*/
+const GOOGLE_CLIENT_ID = "526050797541-fdocltgn64h0opt6jqgah1skllp9cpc3.apps.googleusercontent.com";
+let googleUser = JSON.parse(localStorage.getItem('hy_google_user') || 'null');
+
+function parseJwt(token){
+  try{
+    const base64 = token.split('.')[1].replace(/-/g,'+').replace(/_/g,'/');
+    return JSON.parse(decodeURIComponent(atob(base64).split('').map(c=>'%'+('00'+c.charCodeAt(0).toString(16)).slice(-2)).join('')));
+  }catch(e){ return null; }
+}
+function handleGoogleCredential(response){
+  const payload = parseJwt(response.credential);
+  if(!payload) return;
+  googleUser = { name: payload.name, email: payload.email, picture: payload.picture };
+  localStorage.setItem('hy_google_user', JSON.stringify(googleUser));
+  profileName = payload.name;
+  localStorage.setItem('hy_profile_name', profileName);
+  document.getElementById('profileName').textContent = profileName;
+  document.getElementById('profileSubText').textContent = payload.email;
+  if(payload.picture){
+    document.getElementById('avatarInitial').innerHTML = `<img src="${payload.picture}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" referrerpolicy="no-referrer">`;
+    const obPrev = document.getElementById('obAvatarPreview');
+    if(obPrev) obPrev.innerHTML = `<img src="${payload.picture}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" referrerpolicy="no-referrer">`;
+  }
+  renderGoogleSigninUI();
+  const ob = document.getElementById('onboardScreen');
+  if(ob && !ob.classList.contains('hide')){
+    localStorage.setItem('hy_onboarded', '1');
+    ob.classList.add('hide');
+    showToast('خوش آمدید، ' + payload.name);
+  } else {
+    showToast('با حساب گوگل وارد شدید');
+  }
+}
+function googleSignOut(){
+  googleUser = null;
+  localStorage.removeItem('hy_google_user');
+  document.getElementById('profileSubText').textContent = 'پروفایل محلی — بدون نیاز به ثبت‌نام';
+  document.getElementById('avatarInitial').innerHTML = TALABEH_AVATAR_SVG;
+  renderGoogleSigninUI();
+  showToast('از حساب گوگل خارج شدید');
+}
+function renderGoogleSigninUI(){
+  const wrap = document.getElementById('googleSigninWrap');
+  if(!wrap) return;
+  if(googleUser){
+    wrap.innerHTML = `<button class="btn-ghost" onclick="googleSignOut()" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h11.8c-.5 2.7-2.1 5-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.6z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.7-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.4-1.3-.7-2.7-.7-4.1s.2-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.5 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.7c3.3 0 6.2 1.1 8.5 3.4l6.3-6.3C34.9 4.3 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.7-5.2 6.6-9.2 12.4-9.2z"/></svg>
+      خروج از حساب گوگل (${googleUser.email})
+    </button>`;
+  } else {
+    wrap.innerHTML = `<div id="googleBtnContainer" style="display:flex; justify-content:center;"></div>`;
+    try{
+      if(window.google && google.accounts && GOOGLE_CLIENT_ID && !GOOGLE_CLIENT_ID.includes('YOUR_')){
+        google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: handleGoogleCredential });
+        google.accounts.id.renderButton(document.getElementById('googleBtnContainer'), { theme:'outline', size:'medium', shape:'pill', text:'signin_with', locale:'fa' });
+      } else {
+        wrap.innerHTML = `<p style="font-size:11px; color:var(--text-sub);">ورود با گوگل هنوز پیکربندی نشده است.</p>`;
+      }
+    }catch(e){
+      wrap.innerHTML = `<p style="font-size:11px; color:var(--text-sub);">سرویس ورود با گوگل در دسترس نیست (اتصال اینترنت را بررسی کنید).</p>`;
+    }
+  }
+}
+if(googleUser){
+  document.getElementById('profileName').textContent = googleUser.name;
+  if(googleUser.picture){
+    document.getElementById('avatarInitial').innerHTML = `<img src="${googleUser.picture}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" referrerpolicy="no-referrer">`;
+  }
+}
+window.addEventListener('load', ()=>{ setTimeout(()=>{ renderGoogleSigninUI(); renderObGoogleButton(); }, 400); });
+function renderObGoogleButton(){
+  const c = document.getElementById('obGoogleBtnContainer');
+  if(!c || googleUser) return;
+  try{
+    if(window.google && google.accounts && GOOGLE_CLIENT_ID){
+      google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: handleGoogleCredential });
+      google.accounts.id.renderButton(c, { theme:'filled_black', size:'large', shape:'pill', text:'signup_with', locale:'fa', width:260 });
+    }
+  }catch(e){}
+}
 
 /* ============ THEME ============ */
 function applyTheme(mode){
@@ -1409,10 +1823,15 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ()=
 /* ============ ACCENT THEME CUSTOMIZATION ============ */
 const ACCENTS = [
   {id:'emerald', name:'زمرد اسلامی', green:'#22795A', greenDeep:'#0F3D2E', gold:'#D4AF5A'},
-  {id:'karbala', name:'سبز کربلا', green:'#1B6B4F', greenDeep:'#0B2E22', gold:'#C9A24B'},
-  {id:'najaf',   name:'طلایی نجف', green:'#2E7D53', greenDeep:'#0F3D2E', gold:'#E0B94A'},
-  {id:'mashhad', name:'فیروزه‌ای مشهد', green:'#1E8A7A', greenDeep:'#0D3B34', gold:'#D9B24E'},
-  {id:'qom',     name:'یاسی قم', green:'#3A6B4A', greenDeep:'#17301F', gold:'#CBAE6B'},
+  {id:'lajevard', name:'لاجوردی', green:'#2E5FA3', greenDeep:'#12274A', gold:'#E0B94A'},
+  {id:'anar',    name:'یاقوتی زرشکی', green:'#9C2B3E', greenDeep:'#421119', gold:'#D9B24E'},
+  {id:'banafsh', name:'بنفش کهربایی', green:'#6A3FA0', greenDeep:'#2A1747', gold:'#E4C77A'},
+  {id:'mashhad', name:'فیروزه‌ای مشهد', green:'#1E8A9E', greenDeep:'#0D3B44', gold:'#D9B24E'},
+  {id:'sahra',   name:'خاکی-برنزی', green:'#8A5A2E', greenDeep:'#3A2712', gold:'#E3C08A'},
+  {id:'zeytoon', name:'زیتونی طلایی', green:'#6E7A2E', greenDeep:'#2E3312', gold:'#D8C48A'},
+  {id:'sormei',  name:'سرمه‌ای شب', green:'#233A6B', greenDeep:'#0D1730', gold:'#C9A24B'},
+  {id:'gilas',   name:'گیلاسی گرم', green:'#B0456B', greenDeep:'#4A1B2C', gold:'#E8C98F'},
+  {id:'khaki',   name:'دودی خاکستری', green:'#4A5560', greenDeep:'#1D2227', gold:'#CBAE6B'},
 ];
 let accentId = localStorage.getItem('hy_accent') || 'emerald';
 function applyAccent(id){
@@ -1437,6 +1856,41 @@ function renderAccentSwatches(){
 applyAccent(accentId);
 renderAccentSwatches();
 
+/* ============ LANGUAGE SWITCHER (core UI chrome) ============ */
+const NAV_I18N = {
+  home:{fa:'خانه', ar:'الرئيسية', en:'Home'},
+  tools:{fa:'امکانات', ar:'الأدوات', en:'Tools'},
+  profile:{fa:'پروفایل', ar:'الملف الشخصي', en:'Profile'},
+  music:{fa:'موسیقی', ar:'الموسيقى', en:'Music'}
+};
+const UI_I18N = {
+  settingsTitleText: {fa:'تنظیمات', ar:'الإعدادات', en:'Settings'},
+  toolsTitleText: {fa:'امکانات', ar:'الأدوات', en:'Tools'},
+  toolsSubText: {fa:'همه ابزارها و بخش‌های طلبه یار', ar:'جميع أدوات وأقسام طلبه یار', en:'All tools and sections of Talabe Yar'}
+};
+function setAppLang(lang){
+  localStorage.setItem('hy_lang', lang);
+  ['fa','ar','en'].forEach(l=>{ const b=document.getElementById('langBtn-'+l); if(b) b.classList.toggle('active', l===lang); });
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('dir', lang==='en' ? 'ltr' : 'rtl');
+  applyLangStrings(lang);
+}
+function applyLangStrings(lang){
+  document.querySelectorAll('.nav-item').forEach(btn=>{
+    const key = btn.dataset.screen;
+    const span = btn.querySelector('span');
+    if(span && NAV_I18N[key]) span.textContent = NAV_I18N[key][lang] || NAV_I18N[key].fa;
+  });
+  Object.keys(UI_I18N).forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.textContent = UI_I18N[id][lang] || UI_I18N[id].fa;
+  });
+}
+(function initLang(){
+  const saved = localStorage.getItem('hy_lang') || 'fa';
+  setAppLang(saved);
+})();
+
 /* ============ NAV ============ */
 function go(name){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
@@ -1445,6 +1899,7 @@ function go(name){
   window.scrollTo(0,0);
   if(name==='music') renderMusicList();
   if(name==='home') renderHomeRecent();
+  if(name==='profile') renderProfileCustomization();
   if(name==='sayings') renderSayings();
   if(name==='imams') renderImams();
   if(name==='quran' && !quranLoaded) loadQuranJuz(currentJuz);
@@ -1470,22 +1925,22 @@ function showToast(msg){
 /* ============ GREETING (time aware + varied) ============ */
 const GREETINGS = {
   night:[
-    {t:'شب بخیر، به حوزه یار خوش آمدید', s:'در این ساعت آرام شب، اندکی موسیقی معنوی گوش دهید یا سخنی نورانی بخوانید.'},
+    {t:'شب بخیر، به طلبه یار خوش آمدید', s:'در این ساعت آرام شب، اندکی موسیقی معنوی گوش دهید یا سخنی نورانی بخوانید.'},
     {t:'شب به‌خیر طلبه عزیز', s:'قبل از خواب، یک صفحه از قرآن روزانه را مرور کنید.'},
-    {t:'سلام، شب آرامی داشته باشید', s:'حوزه یار همیشه همراه شماست، حتی در دل شب.'}
+    {t:'سلام، شب آرامی داشته باشید', s:'طلبه یار همیشه همراه شماست، حتی در دل شب.'}
   ],
   morning:[
-    {t:'صبح بخیر، به حوزه یار خوش آمدید', s:'روزتان را با تلاوت قرآن و یک سخن نورانی آغاز کنید.'},
+    {t:'صبح بخیر، به طلبه یار خوش آمدید', s:'روزتان را با تلاوت قرآن و یک سخن نورانی آغاز کنید.'},
     {t:'صبح شما پر از برکت', s:'وقت مطالعه و مرور درس امروز رسیده است.'},
     {t:'بامدادتان خوش، طلبه عزیز', s:'موسیقی و مداحی خودتان را برای شروع روز پخش کنید.'}
   ],
   noon:[
-    {t:'ظهر بخیر، به حوزه یار خوش آمدید', s:'وقت مناسبی برای مرور کتابخانه حوزه و اخبار روز است.'},
+    {t:'ظهر بخیر، به طلبه یار خوش آمدید', s:'وقت مناسبی برای مرور کتابخانه حوزه و اخبار روز است.'},
     {t:'ظهرتان به خیر و برکت', s:'کمی استراحت کنید و یک روایت نورانی از اهل‌بیت بخوانید.'},
     {t:'سلام، ظهر آرامی داشته باشید', s:'اخبار معتبر و قیمت لحظه‌ای بازار در دسترس شماست.'}
   ],
   evening:[
-    {t:'عصر بخیر، به حوزه یار خوش آمدید', s:'موسیقی خودتان را پخش کنید و آرامش را همراه خود ببرید.'},
+    {t:'عصر بخیر، به طلبه یار خوش آمدید', s:'موسیقی خودتان را پخش کنید و آرامش را همراه خود ببرید.'},
     {t:'عصرتان بخیر و خوش', s:'وقت خوبی برای مرور کتاب‌های پایه یا نظام قدیم حوزه است.'},
     {t:'سلام، عصر خوبی داشته باشید', s:'به اخبار معتبر و بازار اقتصاد سری بزنید.'}
   ]
@@ -1555,6 +2010,43 @@ const SORT_MODES = [
   {key:'name', label:'نام (الفبا)'},
   {key:'artist', label:'خواننده'},
 ];
+
+/* ============ KASHOOB EMBED — resize / hide controls ============ */
+let kashoobExpanded = false;
+let kashoobVisible = true;
+function toggleKashoobSize(){
+  kashoobExpanded = !kashoobExpanded;
+  const wrap = document.getElementById('kashoobWrap');
+  const btn = document.getElementById('kashoobExpandBtn');
+  wrap.classList.toggle('expanded', kashoobExpanded);
+  if(btn) btn.querySelector('span').textContent = kashoobExpanded ? 'اندازه عادی' : 'بزرگ‌نمایی';
+}
+function toggleKashoobVisible(){
+  kashoobVisible = !kashoobVisible;
+  const wrap = document.getElementById('kashoobWrap');
+  const btn = document.getElementById('kashoobHideBtn');
+  wrap.classList.toggle('collapsed', !kashoobVisible);
+  if(btn) btn.querySelector('span').textContent = kashoobVisible ? 'مخفی کردن' : 'نمایش';
+}
+
+/* ============ ONLINE HAWZAH LIBRARY LINK CARD ============ */
+/* ============ ONLINE HAWZAH LIBRARY EMBED — resize / hide controls ============ */
+let hawzahExpanded = false;
+let hawzahVisible = true;
+function toggleHawzahSize(){
+  hawzahExpanded = !hawzahExpanded;
+  const wrap = document.getElementById('hawzahWrap');
+  const btn = document.getElementById('hawzahExpandBtn');
+  wrap.classList.toggle('expanded', hawzahExpanded);
+  if(btn) btn.querySelector('span').textContent = hawzahExpanded ? 'اندازه عادی' : 'بزرگ‌نمایی';
+}
+function toggleHawzahVisible(){
+  hawzahVisible = !hawzahVisible;
+  const wrap = document.getElementById('hawzahWrap');
+  const btn = document.getElementById('hawzahHideBtn');
+  wrap.classList.toggle('collapsed', !hawzahVisible);
+  if(btn) btn.querySelector('span').textContent = hawzahVisible ? 'مخفی کردن' : 'نمایش';
+}
 
 function setMusicTab(tab){
   musicTab = tab;
@@ -1851,6 +2343,36 @@ function editProfile(){
   }
 }
 
+/* ============ PROFILE CUSTOMIZATION (bio + cover color) ============ */
+const PROFILE_COVERS = ['#22795A','#1B6B4F','#2E7D53','#1E8A7A','#3A6B4A','#5C7A3D','#12695A','#28524A','#4A7A5E','#8A5A2E'];
+let profileBio = localStorage.getItem('hy_profile_bio') || '';
+let profileCover = localStorage.getItem('hy_profile_cover') || PROFILE_COVERS[0];
+function renderProfileCustomization(){
+  document.getElementById('profileBioInput').value = profileBio;
+  document.getElementById('profileBioText').textContent = profileBio;
+  document.getElementById('profileBioText').style.display = profileBio ? 'block' : 'none';
+  const wrap = document.getElementById('profileCoverSwatches');
+  if(wrap){
+    wrap.innerHTML = PROFILE_COVERS.map(c=>`<div class="pcs-dot ${c===profileCover?'active':''}" style="background:${c}" onclick="setProfileCover('${c}')"></div>`).join('');
+  }
+  applyProfileCover();
+}
+function setProfileCover(c){
+  profileCover = c;
+  renderProfileCustomization();
+}
+function applyProfileCover(){
+  const head = document.getElementById('profileHead');
+  if(head) head.style.background = `linear-gradient(160deg, ${profileCover}22, transparent 70%)`;
+}
+function saveProfileCustomization(){
+  profileBio = document.getElementById('profileBioInput').value.trim().slice(0,140);
+  localStorage.setItem('hy_profile_bio', profileBio);
+  localStorage.setItem('hy_profile_cover', profileCover);
+  renderProfileCustomization();
+  showToast('شخصی‌سازی پروفایل ذخیره شد');
+}
+
 /* ============ NEWS ============ */
 function openNews(url){
   if(!navigator.onLine){ showToast('اتصال اینترنت در دسترس نیست'); return; }
@@ -1860,9 +2382,9 @@ function openNews(url){
 /* ============ SHARE / REPORT / ABOUT ============ */
 const APP_DOWNLOAD_URL = 'APP_DOWNLOAD_URL';
 function shareApp(){
-  const text = 'حوزه یار را امتحان کنید: '+APP_DOWNLOAD_URL;
+  const text = 'طلبه یار را امتحان کنید: '+APP_DOWNLOAD_URL;
   if(navigator.share){
-    navigator.share({title:'حوزه یار', text, url: APP_DOWNLOAD_URL}).catch(()=>{});
+    navigator.share({title:'طلبه یار', text, url: APP_DOWNLOAD_URL}).catch(()=>{});
   } else {
     navigator.clipboard?.writeText(text);
     showToast('لینک برنامه کپی شد');
@@ -1870,16 +2392,34 @@ function shareApp(){
 }
 function reportProblem(){
   const email = 'mbshrylyrda954@gmail.com';
-  window.location.href = 'mailto:'+email+'?subject='+encodeURIComponent('گزارش مشکل - حوزه یار')+'&body='+encodeURIComponent('لطفاً مشکل یا پیشنهاد خود را اینجا بنویسید:\n\n');
+  window.location.href = 'mailto:'+email+'?subject='+encodeURIComponent('گزارش مشکل - طلبه یار')+'&body='+encodeURIComponent('لطفاً مشکل یا پیشنهاد خود را اینجا بنویسید:\n\n');
 }
 function showAbout(){
-  alert('حوزه یار — نسخه ۱.۰.۰\nهمراه همیشگی شما در مسیر معنویت\n\nبرنامه‌ای برای پخش موسیقی محلی، دسترسی به اخبار معتبر و آرامش روزانه.');
+  alert('طلبه یار — نسخه ۱.۰.۰\nهمراه همیشگی شما در مسیر طلبگی\n\nبرنامه‌ای برای پخش موسیقی محلی، دسترسی به اخبار معتبر و آرامش روزانه.');
 }
 
-/* ============ INIT ============ */
-renderMusicList();
-renderHomeRecent();
-setTimeout(()=>{ document.getElementById('splash').classList.add('hide'); }, 1500);
+/* ============ QUICKNAV MARQUEE ============ */
+const QUICKNAV_ITEMS = [
+  {label:'قرآن', screen:'quran', icon:'<path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/><path d="M6.5 17H20v3H6.5A2.5 2.5 0 014 17.5"/>'},
+  {label:'سخن زیبا', screen:'sayings', icon:'<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>'},
+  {label:'چهارده معصوم', screen:'imams', icon:'<path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/>'},
+  {label:'کتابخانه', screen:'library', icon:'<path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/>'},
+  {label:'اخبار', screen:'news', icon:'<path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/>'},
+  {label:'اقتصاد', screen:'economy', icon:'<path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>'},
+  {label:'موسیقی', screen:'music', icon:'<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'},
+  {label:'امکانات', screen:'tools', icon:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>'},
+  {label:'پروفایل', screen:'profile', icon:'<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>'},
+  {label:'تنظیمات', screen:'settings', icon:'<circle cx="12" cy="12" r="3"/>'}
+];
+function renderQuicknav(){
+  const track = document.getElementById('quicknavTrack');
+  if(!track) return;
+  const chip = it => `<div class="quicknav-chip" onclick="go('${it.screen}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${it.icon}</svg><span>${it.label}</span></div>`;
+  const html = QUICKNAV_ITEMS.map(chip).join('');
+  track.innerHTML = html; // static row, no auto-scroll duplication needed
+}
+
+/* ============ INIT (moved to end of script) ============ */
 
 /* ============ QURAN — live juz reader (alquran.cloud) ============ */
 async function loadQuranJuz(n){
@@ -1932,111 +2472,158 @@ function quranPage(dir){
 
 /* ============ SAYINGS — curated selection ============ */
 const SAYINGS = [
-  {t:'العِلمُ خَیرٌ مِن المال، العلمُ یَحرُسُکَ و أنتَ تَحرُسُ المال — دانش از مال بهتر است؛ دانش تو را نگهبانی می‌کند و تو باید از مال نگهبانی کنی.', s:'امام علی(ع) — نهج‌البلاغه'},
-  {t:'کُن فی الدنیا کأنَّکَ غریبٌ أو عابرُ سبیل — در دنیا چنان باش که گویی غریبی یا رهگذری.', s:'پیامبر اکرم(ص)'},
-  {t:'قیمةُ کُلِّ امرئٍ ما یُحسِنُه — ارزش هر انسانی به اندازه‌ی دانش و مهارتی است که نیکو انجام می‌دهد.', s:'امام علی(ع) — نهج‌البلاغه'},
-  {t:'خیرُ الناسِ مَن ینفَعُ الناس — بهترین مردم کسی است که به مردم سود می‌رساند.', s:'پیامبر اکرم(ص)'},
-  {t:'مَن عَرَفَ نفسَه فقد عرَفَ ربَّه — هر که خود را شناخت، پروردگار خویش را شناخته است.', s:'منسوب به امام علی(ع)'},
-  {t:'الصَّبرُ مِفتاحُ الفَرَج — صبر، کلید گشایش و فرج است.', s:'حدیث مشهور نبوی'},
-  {t:'إنَّما الأعمالُ بالنِّیّات — همانا ارزش کارها به نیت‌هاست.', s:'پیامبر اکرم(ص)'},
-  {t:'رَحِمَ اللهُ امرأً عَرَفَ قَدرَه — خدا رحمت کند کسی را که اندازه‌ی خود را بشناسد.', s:'امام علی(ع)'},
-  {t:'الدنیا مزرعةُ الآخرة — دنیا کشتزار آخرت است.', s:'حدیث نبوی مشهور'},
-  {t:'ما أنعَمَ اللهُ علی عبدٍ نعمةً فَعَرَفَها بقلبِه إلّا لَزِمَه شُکرُها — هیچ نعمتی خدا به بنده‌ای نداد که او با دل بشناسدش، مگر آنکه شکرش بر او واجب شد.', s:'امام علی(ع) — نهج‌البلاغه'},
-  {t:'لا تکن عبدَ غیرِک و قد جعلَک اللهُ حُرّاً — بنده‌ی دیگری مباش، در حالی که خدا تو را آزاد آفریده است.', s:'امام علی(ع) — نامه به امام حسن(ع)'},
-  {t:'أفضلُ الجهادِ کلمةُ عدلٍ عند سلطانٍ جائر — برترین جهاد، سخن حق در برابر حاکم ستمگر است.', s:'پیامبر اکرم(ص)'},
-  {t:'الحِلمُ سِترٌ ساتِر و العقلُ حُسامٌ قاطع — بردباری پوششی نگه‌دارنده و خرد شمشیری برنده است.', s:'امام علی(ع)'},
-  {t:'مَن حَسُنَ خُلقُه طابَت عیشتُه — کسی که خوش‌خلق باشد، زندگی‌اش گواراتر خواهد بود.', s:'امام علی(ع)'},
-  {t:'تُهدِی الیَّ عیوبی أحَبُّ إلَیَّ مِمَّن یُهدِی إلَیَّ الدُّرَّ و الجواهر — کسی که عیوبم را به من هدیه دهد، نزد من محبوب‌تر از کسی است که مروارید و جواهر هدیه دهد.', s:'امام علی(ع)'},
-  {t:'أعجَزُ الناسِ مَن عَجَزَ عن اکتسابِ الإخوان، و أعجَزُ منه مَن ضَیَّعَ مَن ظَفَرَ به منهم — ناتوان‌ترین مردم کسی است که نتواند دوست پیدا کند، و ناتوان‌تر از او کسی است که دوستی یافته را از دست بدهد.', s:'امام علی(ع)'},
-  {t:'مَن أصبَحَ لا یَهتَمُّ بأمورِ المسلمین فلیس منهم — کسی که صبح کند و به کار مسلمانان اهمیت ندهد، از آنان نیست.', s:'پیامبر اکرم(ص)'},
-  {t:'الکَمالُ کُلُّ الکَمال، التفقُّه فی الدین، و الصبرُ علی النائبة، و تقدیرُ المعیشة — کمال تمام‌عیار، ژرف‌نگری در دین، شکیبایی در مصیبت و تدبیر در زندگی است.', s:'امام علی(ع)'},
-  {t:'العَقلُ حِفظُ التجارب — خرد، نگهداری تجربه‌هاست.', s:'امام علی(ع)'},
-  {t:'إذا وَصَلَت إلیکم أطرافُ النعم فلا تُنَفِّروا أقاصِیَها بقِلَّةِ الشُّکر — هنگامی که آغاز نعمت به شما رسید، آن را با کم‌سپاسی از خود مرانید.', s:'امام علی(ع)'},
-  {t:'المؤمنُ مرآةُ المؤمن — مؤمن آینه‌ی مؤمن است.', s:'پیامبر اکرم(ص)'},
-  {t:'بِرُّ الوالدین من أفضل القُرُبات — نیکی به پدر و مادر از برترین راه‌های تقرب به خداست.', s:'امام سجاد(ع) — رساله حقوق'},
-  {t:'حَقُّ الجارِ حِفظُه غائباً و إکرامُه شاهداً — حق همسایه این است که در غیابش نگاهبانش باشی و در حضورش گرامی‌اش بداری.', s:'امام سجاد(ع) — رساله حقوق'},
-  {t:'مَن أراد أن یکون أقوَی الناس فَلیَتَوَکَّل علی الله — هر که می‌خواهد نیرومندترین مردم باشد، بر خدا توکل کند.', s:'امام صادق(ع)'},
-  {t:'تَزَاوَروا فإنَّ فی زیارتِکم إحیاءً لقلوبِکم — به دیدار یکدیگر بروید؛ زیرا در دیدارتان زنده‌شدن دل‌هاست.', s:'امام صادق(ع)'},
-  {t:'ثلاثٌ مَن کُنَّ فیه استکمَلَ خِصالَ الإیمان: إذا رَضِیَ لم یُدخِله رِضاه فی باطل، و إذا غَضِبَ لم یُخرِجه غَضَبُه من الحق، و إذا قَدَرَ لم یَتَعاطَ ما لیس له — سه خصلت است که هرکس داشته باشد، ایمانش کامل است.', s:'امام باقر(ع)'},
-  {t:'الکَذِبُ خَرابُ الإیمان — دروغ، ویرانگر ایمان است.', s:'امام صادق(ع)'},
-  {t:'إنَّ اللهَ فَوَّضَ إلی المؤمنِ أمورَه کلَّها و لم یُفَوِّض إلیه أن یَکونَ ذلیلاً — خداوند همه‌ی کارهای مؤمن را به او سپرد، جز اینکه ذلیل باشد.', s:'امام صادق(ع)'},
-  {t:'خالِطُوا الناسَ بما یَعرِفون و دَعوهم مِمّا یُنکِرون — با مردم به آنچه می‌شناسند رفتار کنید و آنچه را نمی‌پسندند رها کنید.', s:'امام صادق(ع)'},
-  {t:'مَن قَنِعَ بما رَزَقَه اللهُ فهو مِن أغنَی الناس — هر که به آنچه خدا روزی‌اش کرده قانع باشد، از توانگرترین مردم است.', s:'امام رضا(ع)'},
-  {t:'صِلَةُ الرَّحِمِ تُهَذِّبُ الأخلاق و تُسمِحُ الأکُفّ و تُطیِّبُ النفس و تَزیدُ فی الرِّزق — صله‌ی رحم اخلاق را پاک می‌کند، دست را بخشنده و روح را پاکیزه می‌کند و روزی را می‌افزاید.', s:'امام رضا(ع)'},
-  {t:'إذا کان زمانُ العدل ازداد المال، لِوَضعِ الناس أموالَهم فی حقوقها — در زمان عدالت، ثروت افزون می‌شود زیرا مردم اموال خود را در جای حقشان می‌نهند.', s:'امام رضا(ع)'},
-  {t:'وَقُّروا کبارَکم یُوَقِّرکم صِغارُکم — بزرگان خود را حرمت نهید تا کوچکانتان نیز شما را حرمت نهند.', s:'امام کاظم(ع)'},
-  {t:'العَقلُ ما عُبِدَ به الرحمن و اکتُسِب به الجِنان — خرد آن است که با آن خدا پرستیده و بهشت به دست آید.', s:'امام کاظم(ع)'},
-  {t:'یا هِشام، مَن أراد الغِنی بلا مال، و راحةَ القلبِ من الحَسَد، و السلامةَ فی الدین، فلیَتَضَرَّع إلی الله فی مسألته أن یُکَمِّل عقلَه — هرکه توانگری بی‌مال و آسودگی دل از حسد و سلامت در دین خواهد، در نیایش از خدا بخواهد که خردش را کامل کند.', s:'امام کاظم(ع) — به هشام'},
-  {t:'إنَّ اللهَ خَصَّ عبادَه بآیتین: الرضا و التسلیم — خداوند بندگانش را به دو ویژگی متمایز کرد: رضایت و تسلیم.', s:'امام هادی(ع)'},
-  {t:'الدنیا سُوقٌ رَبِحَ فیها قومٌ و خَسِرَ آخرون — دنیا بازاری است که گروهی در آن سود بردند و گروهی زیان دیدند.', s:'امام هادی(ع)'},
-  {t:'مَن رَضِیَ عن نفسِه کَثُرَ السَّاخِطون علیه — هر که از خود خشنود باشد (خودپسند شود)، دشمنان و ناراضیان بر او افزون شوند.', s:'امام عسکری(ع)'},
-  {t:'زُهدُ المرءِ فی الشُّبُهات أحسنُ زهداً منه فی الحرام — پرهیز انسان از امور شبهه‌ناک، از پرهیز او از حرام نیکوتر است.', s:'امام عسکری(ع)'},
-  {t:'انتظارُ الفَرَج مِن أعظم الفَرَج — چشم به راه گشایش بودن، خود بزرگ‌ترین گشایش است.', s:'روایت مشهور در باب امام زمان(عج)'},
-  {t:'المؤمنُ للمؤمن کالبُنیانِ یَشُدُّ بعضُه بعضاً — مؤمن برای مؤمن همچون ساختمانی است که اجزایش یکدیگر را استوار می‌سازند.', s:'پیامبر اکرم(ص)'},
-  {t:'أحَبُّ الأعمالِ إلی الله إدخالُ السُّرورِ علی المؤمن — محبوب‌ترین کار نزد خدا، شاد کردن دل مؤمن است.', s:'پیامبر اکرم(ص)'},
-  {t:'مَن سَلَکَ طریقاً یَطلُبُ فیه علماً سَهَّلَ اللهُ له طریقاً إلی الجنة — هر که راهی رود که در آن دانشی بجوید، خدا راهی به سوی بهشت برایش هموار می‌کند.', s:'پیامبر اکرم(ص)'},
-  {t:'الجَنَّةُ تحتَ أقدامِ الأمَّهات — بهشت زیر پای مادران است.', s:'حدیث مشهور نبوی'},
-  {t:'ما المُجاهدُ الشهیدُ فی سبیل الله بأعظمَ أجراً مِمَّن قَدَرَ فَعَفَّ — پاداش کسی که توانا بر گناه است و خودداری می‌کند، کمتر از شهید مجاهد در راه خدا نیست.', s:'حدیث مشهور نبوی'},
-  {t:'خیرُ الأمور أوسَطُها — بهترین کارها، میانه‌روی در آن‌هاست.', s:'حدیث نبوی'},
-  {t:'إنَّ لله عباداً یختَصُّهم بالنِّعَم لِمَنافعِ العباد — خداوند بندگانی دارد که نعمت‌ها را برای سود رساندن به دیگر بندگان به آنان اختصاص داده است.', s:'پیامبر اکرم(ص)'},
-  {t:'الکَلِمَةُ الطَّیِّبَةُ صَدَقَة — سخن نیکو، صدقه است.', s:'پیامبر اکرم(ص)'},
-  {t:'مَن سَتَرَ عَورَةَ أخیه المؤمن سَتَرَ اللهُ عَورَتَه فی الدنیا و الآخرة — هر که عیب برادر مؤمنش را بپوشاند، خدا عیب او را در دنیا و آخرت می‌پوشاند.', s:'امام صادق(ع)'},
-  {t:'إنَّما یَرحَمُ اللهُ مِن عبادِه الرُّحَماء — خداوند از میان بندگانش تنها رحیمان را رحمت می‌کند.', s:'پیامبر اکرم(ص)'},
-  {t:'مِن کَرَمِ المرء بِرُّه بإخوانه — از بزرگواری انسان، نیکی‌اش به برادرانش است.', s:'امام علی(ع)'}
+  {c:'aimma', t:'العِلمُ خَیرٌ مِن المال، العلمُ یَحرُسُکَ و أنتَ تَحرُسُ المال — دانش از مال بهتر است؛ دانش تو را نگهبانی می‌کند و تو باید از مال نگهبانی کنی.', s:'امام علی(ع) — نهج‌البلاغه'},
+  {c:'nabi', t:'کُن فی الدنیا کأنَّکَ غریبٌ أو عابرُ سبیل — در دنیا چنان باش که گویی غریبی یا رهگذری.', s:'پیامبر اکرم(ص)'},
+  {c:'aimma', t:'قیمةُ کُلِّ امرئٍ ما یُحسِنُه — ارزش هر انسانی به اندازه‌ی دانش و مهارتی است که نیکو انجام می‌دهد.', s:'امام علی(ع) — نهج‌البلاغه'},
+  {c:'nabi', t:'خیرُ الناسِ مَن ینفَعُ الناس — بهترین مردم کسی است که به مردم سود می‌رساند.', s:'پیامبر اکرم(ص)'},
+  {c:'aimma', t:'مَن عَرَفَ نفسَه فقد عرَفَ ربَّه — هر که خود را شناخت، پروردگار خویش را شناخته است.', s:'منسوب به امام علی(ع)'},
+  {c:'aimma', t:'الصَّبرُ مِفتاحُ الفَرَج — صبر، کلید گشایش و فرج است.', s:'حدیث مشهور نبوی'},
+  {c:'nabi', t:'إنَّما الأعمالُ بالنِّیّات — همانا ارزش کارها به نیت‌هاست.', s:'پیامبر اکرم(ص)'},
+  {c:'aimma', t:'رَحِمَ اللهُ امرأً عَرَفَ قَدرَه — خدا رحمت کند کسی را که اندازه‌ی خود را بشناسد.', s:'امام علی(ع)'},
+  {c:'aimma', t:'الدنیا مزرعةُ الآخرة — دنیا کشتزار آخرت است.', s:'حدیث نبوی مشهور'},
+  {c:'aimma', t:'ما أنعَمَ اللهُ علی عبدٍ نعمةً فَعَرَفَها بقلبِه إلّا لَزِمَه شُکرُها — هیچ نعمتی خدا به بنده‌ای نداد که او با دل بشناسدش، مگر آنکه شکرش بر او واجب شد.', s:'امام علی(ع) — نهج‌البلاغه'},
+  {c:'aimma', t:'لا تکن عبدَ غیرِک و قد جعلَک اللهُ حُرّاً — بنده‌ی دیگری مباش، در حالی که خدا تو را آزاد آفریده است.', s:'امام علی(ع) — نامه به امام حسن(ع)'},
+  {c:'nabi', t:'أفضلُ الجهادِ کلمةُ عدلٍ عند سلطانٍ جائر — برترین جهاد، سخن حق در برابر حاکم ستمگر است.', s:'پیامبر اکرم(ص)'},
+  {c:'aimma', t:'الحِلمُ سِترٌ ساتِر و العقلُ حُسامٌ قاطع — بردباری پوششی نگه‌دارنده و خرد شمشیری برنده است.', s:'امام علی(ع)'},
+  {c:'aimma', t:'مَن حَسُنَ خُلقُه طابَت عیشتُه — کسی که خوش‌خلق باشد، زندگی‌اش گواراتر خواهد بود.', s:'امام علی(ع)'},
+  {c:'aimma', t:'تُهدِی الیَّ عیوبی أحَبُّ إلَیَّ مِمَّن یُهدِی إلَیَّ الدُّرَّ و الجواهر — کسی که عیوبم را به من هدیه دهد، نزد من محبوب‌تر از کسی است که مروارید و جواهر هدیه دهد.', s:'امام علی(ع)'},
+  {c:'aimma', t:'أعجَزُ الناسِ مَن عَجَزَ عن اکتسابِ الإخوان، و أعجَزُ منه مَن ضَیَّعَ مَن ظَفَرَ به منهم — ناتوان‌ترین مردم کسی است که نتواند دوست پیدا کند، و ناتوان‌تر از او کسی است که دوستی یافته را از دست بدهد.', s:'امام علی(ع)'},
+  {c:'nabi', t:'مَن أصبَحَ لا یَهتَمُّ بأمورِ المسلمین فلیس منهم — کسی که صبح کند و به کار مسلمانان اهمیت ندهد، از آنان نیست.', s:'پیامبر اکرم(ص)'},
+  {c:'aimma', t:'الکَمالُ کُلُّ الکَمال، التفقُّه فی الدین، و الصبرُ علی النائبة، و تقدیرُ المعیشة — کمال تمام‌عیار، ژرف‌نگری در دین، شکیبایی در مصیبت و تدبیر در زندگی است.', s:'امام علی(ع)'},
+  {c:'aimma', t:'العَقلُ حِفظُ التجارب — خرد، نگهداری تجربه‌هاست.', s:'امام علی(ع)'},
+  {c:'aimma', t:'إذا وَصَلَت إلیکم أطرافُ النعم فلا تُنَفِّروا أقاصِیَها بقِلَّةِ الشُّکر — هنگامی که آغاز نعمت به شما رسید، آن را با کم‌سپاسی از خود مرانید.', s:'امام علی(ع)'},
+  {c:'nabi', t:'المؤمنُ مرآةُ المؤمن — مؤمن آینه‌ی مؤمن است.', s:'پیامبر اکرم(ص)'},
+  {c:'aimma', t:'بِرُّ الوالدین من أفضل القُرُبات — نیکی به پدر و مادر از برترین راه‌های تقرب به خداست.', s:'امام سجاد(ع) — رساله حقوق'},
+  {c:'aimma', t:'حَقُّ الجارِ حِفظُه غائباً و إکرامُه شاهداً — حق همسایه این است که در غیابش نگاهبانش باشی و در حضورش گرامی‌اش بداری.', s:'امام سجاد(ع) — رساله حقوق'},
+  {c:'aimma', t:'مَن أراد أن یکون أقوَی الناس فَلیَتَوَکَّل علی الله — هر که می‌خواهد نیرومندترین مردم باشد، بر خدا توکل کند.', s:'امام صادق(ع)'},
+  {c:'aimma', t:'تَزَاوَروا فإنَّ فی زیارتِکم إحیاءً لقلوبِکم — به دیدار یکدیگر بروید؛ زیرا در دیدارتان زنده‌شدن دل‌هاست.', s:'امام صادق(ع)'},
+  {c:'aimma', t:'ثلاثٌ مَن کُنَّ فیه استکمَلَ خِصالَ الإیمان: إذا رَضِیَ لم یُدخِله رِضاه فی باطل، و إذا غَضِبَ لم یُخرِجه غَضَبُه من الحق، و إذا قَدَرَ لم یَتَعاطَ ما لیس له — سه خصلت است که هرکس داشته باشد، ایمانش کامل است.', s:'امام باقر(ع)'},
+  {c:'aimma', t:'الکَذِبُ خَرابُ الإیمان — دروغ، ویرانگر ایمان است.', s:'امام صادق(ع)'},
+  {c:'aimma', t:'إنَّ اللهَ فَوَّضَ إلی المؤمنِ أمورَه کلَّها و لم یُفَوِّض إلیه أن یَکونَ ذلیلاً — خداوند همه‌ی کارهای مؤمن را به او سپرد، جز اینکه ذلیل باشد.', s:'امام صادق(ع)'},
+  {c:'aimma', t:'خالِطُوا الناسَ بما یَعرِفون و دَعوهم مِمّا یُنکِرون — با مردم به آنچه می‌شناسند رفتار کنید و آنچه را نمی‌پسندند رها کنید.', s:'امام صادق(ع)'},
+  {c:'aimma', t:'مَن قَنِعَ بما رَزَقَه اللهُ فهو مِن أغنَی الناس — هر که به آنچه خدا روزی‌اش کرده قانع باشد، از توانگرترین مردم است.', s:'امام رضا(ع)'},
+  {c:'aimma', t:'صِلَةُ الرَّحِمِ تُهَذِّبُ الأخلاق و تُسمِحُ الأکُفّ و تُطیِّبُ النفس و تَزیدُ فی الرِّزق — صله‌ی رحم اخلاق را پاک می‌کند، دست را بخشنده و روح را پاکیزه می‌کند و روزی را می‌افزاید.', s:'امام رضا(ع)'},
+  {c:'aimma', t:'إذا کان زمانُ العدل ازداد المال، لِوَضعِ الناس أموالَهم فی حقوقها — در زمان عدالت، ثروت افزون می‌شود زیرا مردم اموال خود را در جای حقشان می‌نهند.', s:'امام رضا(ع)'},
+  {c:'aimma', t:'وَقُّروا کبارَکم یُوَقِّرکم صِغارُکم — بزرگان خود را حرمت نهید تا کوچکانتان نیز شما را حرمت نهند.', s:'امام کاظم(ع)'},
+  {c:'aimma', t:'العَقلُ ما عُبِدَ به الرحمن و اکتُسِب به الجِنان — خرد آن است که با آن خدا پرستیده و بهشت به دست آید.', s:'امام کاظم(ع)'},
+  {c:'aimma', t:'یا هِشام، مَن أراد الغِنی بلا مال، و راحةَ القلبِ من الحَسَد، و السلامةَ فی الدین، فلیَتَضَرَّع إلی الله فی مسألته أن یُکَمِّل عقلَه — هرکه توانگری بی‌مال و آسودگی دل از حسد و سلامت در دین خواهد، در نیایش از خدا بخواهد که خردش را کامل کند.', s:'امام کاظم(ع) — به هشام'},
+  {c:'aimma', t:'إنَّ اللهَ خَصَّ عبادَه بآیتین: الرضا و التسلیم — خداوند بندگانش را به دو ویژگی متمایز کرد: رضایت و تسلیم.', s:'امام هادی(ع)'},
+  {c:'aimma', t:'الدنیا سُوقٌ رَبِحَ فیها قومٌ و خَسِرَ آخرون — دنیا بازاری است که گروهی در آن سود بردند و گروهی زیان دیدند.', s:'امام هادی(ع)'},
+  {c:'aimma', t:'مَن رَضِیَ عن نفسِه کَثُرَ السَّاخِطون علیه — هر که از خود خشنود باشد (خودپسند شود)، دشمنان و ناراضیان بر او افزون شوند.', s:'امام عسکری(ع)'},
+  {c:'aimma', t:'زُهدُ المرءِ فی الشُّبُهات أحسنُ زهداً منه فی الحرام — پرهیز انسان از امور شبهه‌ناک، از پرهیز او از حرام نیکوتر است.', s:'امام عسکری(ع)'},
+  {c:'aimma', t:'انتظارُ الفَرَج مِن أعظم الفَرَج — چشم به راه گشایش بودن، خود بزرگ‌ترین گشایش است.', s:'روایت مشهور در باب امام زمان(عج)'},
+  {c:'nabi', t:'المؤمنُ للمؤمن کالبُنیانِ یَشُدُّ بعضُه بعضاً — مؤمن برای مؤمن همچون ساختمانی است که اجزایش یکدیگر را استوار می‌سازند.', s:'پیامبر اکرم(ص)'},
+  {c:'nabi', t:'أحَبُّ الأعمالِ إلی الله إدخالُ السُّرورِ علی المؤمن — محبوب‌ترین کار نزد خدا، شاد کردن دل مؤمن است.', s:'پیامبر اکرم(ص)'},
+  {c:'nabi', t:'مَن سَلَکَ طریقاً یَطلُبُ فیه علماً سَهَّلَ اللهُ له طریقاً إلی الجنة — هر که راهی رود که در آن دانشی بجوید، خدا راهی به سوی بهشت برایش هموار می‌کند.', s:'پیامبر اکرم(ص)'},
+  {c:'aimma', t:'الجَنَّةُ تحتَ أقدامِ الأمَّهات — بهشت زیر پای مادران است.', s:'حدیث مشهور نبوی'},
+  {c:'aimma', t:'ما المُجاهدُ الشهیدُ فی سبیل الله بأعظمَ أجراً مِمَّن قَدَرَ فَعَفَّ — پاداش کسی که توانا بر گناه است و خودداری می‌کند، کمتر از شهید مجاهد در راه خدا نیست.', s:'حدیث مشهور نبوی'},
+  {c:'aimma', t:'خیرُ الأمور أوسَطُها — بهترین کارها، میانه‌روی در آن‌هاست.', s:'حدیث نبوی'},
+  {c:'nabi', t:'إنَّ لله عباداً یختَصُّهم بالنِّعَم لِمَنافعِ العباد — خداوند بندگانی دارد که نعمت‌ها را برای سود رساندن به دیگر بندگان به آنان اختصاص داده است.', s:'پیامبر اکرم(ص)'},
+  {c:'nabi', t:'الکَلِمَةُ الطَّیِّبَةُ صَدَقَة — سخن نیکو، صدقه است.', s:'پیامبر اکرم(ص)'},
+  {c:'aimma', t:'مَن سَتَرَ عَورَةَ أخیه المؤمن سَتَرَ اللهُ عَورَتَه فی الدنیا و الآخرة — هر که عیب برادر مؤمنش را بپوشاند، خدا عیب او را در دنیا و آخرت می‌پوشاند.', s:'امام صادق(ع)'},
+  {c:'nabi', t:'إنَّما یَرحَمُ اللهُ مِن عبادِه الرُّحَماء — خداوند از میان بندگانش تنها رحیمان را رحمت می‌کند.', s:'پیامبر اکرم(ص)'},
+  {c:'aimma', t:'مِن کَرَمِ المرء بِرُّه بإخوانه — از بزرگواری انسان، نیکی‌اش به برادرانش است.', s:'امام علی(ع)'},
+  {c:'rahbar', t:'جوان‌ها باید احساس مسئولیت کنند؛ احساس کنند که آینده‌ی کشور به دست آن‌هاست و باید خودشان را برای ساختن آن آماده کنند.', s:'رهبر انقلاب'},
+  {c:'rahbar', t:'عزت نفس ملی، یعنی یک ملت به توانایی‌های خود متکی باشد و از هیچ قدرتی در دنیا حساب نبرد؛ این را نباید فراموش کرد.', s:'رهبر انقلاب'},
+  {c:'rahbar', t:'علم و پیشرفت علمی، امروز مهم‌ترین ابزار عزت و استقلال یک ملت است؛ جوانان ما باید در این میدان پیشتاز باشند.', s:'رهبر انقلاب'},
+  {c:'rahbar', t:'ایمان به خدا، به انسان آرامش و توان تحمل سختی‌ها را می‌دهد؛ کسی که متکی به خداست، در برابر مشکلات نمی‌شکند.', s:'رهبر انقلاب'},
+  {c:'rahbar', t:'کار و تلاش برای آبادانی کشور، خودش نوعی عبادت است؛ کسی که برای مردم و کشورش زحمت می‌کشد، از عبادت‌کنندگان به‌شمار می‌آید.', s:'رهبر انقلاب'},
+  {c:'rahbar', t:'وحدت میان مسلمانان، رمز عزت و اقتدار امت اسلامی است و دشمنان همیشه به‌دنبال ایجاد تفرقه میان صفوف مسلمین بوده‌اند.', s:'رهبر انقلاب'},
+  {c:'rahbar', t:'کتاب، بهترین همراه انسان برای رشد فکری اوست؛ جوانی که کتاب می‌خواند، افق دیدش گسترده‌تر و تصمیم‌هایش پخته‌تر خواهد بود.', s:'رهبر انقلاب'},
+  {c:'shahid', t:'من رفتم، مبادا کاروان بی‌ستاره بماند؛ راه شهدا را ادامه دهید و از هیچ سختی‌ای نهراسید.', s:'منسوب به شهدای دفاع مقدس'},
+  {c:'shahid', t:'اگر یک روز فکر کنیم آنچه داریم برای خودمان است، آن روز از هدفمان دور شده‌ایم؛ همه‌چیز امانتی است برای خدمت به مردم.', s:'شهید مصطفی چمران'},
+  {c:'shahid', t:'ایمان، مثل چراغی است در دل شب؛ هرچه شب تاریک‌تر شود، نور آن چراغ روشن‌تر به چشم می‌آید.', s:'شهید مرتضی مطهری'},
+  {c:'shahid', t:'اسلام دینی است که میان عقل و عشق، میان دنیا و آخرت، و میان فرد و جامعه توازن برقرار کرده است.', s:'شهید مرتضی مطهری'},
+  {c:'shahid', t:'ما برای رسیدن به هدف، از هیچ فداکاری دریغ نخواهیم کرد؛ خون شهیدان چراغ راه آیندگان است.', s:'منسوب به شهدای دفاع مقدس'},
+  {c:'shahid', t:'انسان تا وقتی به خدا وابسته نشود، در برابر هیچ سختی‌ای استوار نخواهد ماند؛ توکل، منشأ همه‌ی مقاومت‌هاست.', s:'شهید سید عبدالحسین دستغیب'},
+  {c:'shahid', t:'بهترین درس برای ما، ایستادگی و صبر در راه حق است؛ هرچند این راه سخت و پرهزینه باشد.', s:'منسوب به شهدای دفاع مقدس'}
 ];
-function renderSayings(){
+function setSayingCat(cat){
+  document.querySelectorAll('#screen-sayings .seg-control button').forEach(b=>b.classList.toggle('active', b.dataset.cat===cat));
   const wrap = document.getElementById('sayingsList');
-  if(wrap.dataset.rendered) return;
-  wrap.dataset.rendered = '1';
-  wrap.innerHTML = `<div style="font-size:11px; color:var(--text-sub); margin-bottom:14px; line-height:1.9;">گزیده‌ای معتبر از سخنان کوتاه پیامبر اکرم(ص) و اهل‌بیت(ع)، برگرفته از منابع شناخته‌شده روایی مانند نهج‌البلاغه و کتب حدیثی.</div>` +
-    SAYINGS.map(s=>`<div class="saying-card"><p>${s.t}</p><span>${s.s}</span></div>`).join('');
+  wrap.dataset.rendered = '';
+  renderSayings(cat);
+}
+function renderSayings(cat){
+  cat = cat || 'all';
+  const wrap = document.getElementById('sayingsList');
+  const list = cat === 'all' ? SAYINGS : SAYINGS.filter(s=>s.c===cat);
+  wrap.innerHTML = `<div style="font-size:11px; color:var(--text-sub); margin-bottom:14px; line-height:1.9;">گزیده‌ای معتبر از سخنان پیامبر اکرم(ص)، اهل‌بیت(ع)، رهبر انقلاب و شهدا.</div>` +
+    list.map(s=>`<div class="saying-card"><p>${s.t}</p><span>${s.s}</span></div>`).join('');
+}
+
+/* ============ HADITH OF THE DAY (home banner) ============ */
+function renderHadithOfDay(){
+  const el = document.getElementById('hadithOfDay');
+  if(!el) return;
+  const today = new Date().toISOString().slice(0,10);
+  if(localStorage.getItem('hy_hod_dismissed') === today) return;
+  let idx;
+  const cached = localStorage.getItem('hy_hod_date');
+  if(cached === today){
+    idx = parseInt(localStorage.getItem('hy_hod_idx') || '0', 10);
+  } else {
+    idx = Math.floor(Math.random()*SAYINGS.length);
+    localStorage.setItem('hy_hod_date', today);
+    localStorage.setItem('hy_hod_idx', String(idx));
+  }
+  const s = SAYINGS[idx] || SAYINGS[0];
+  el.innerHTML = `<button class="hod-dismiss" onclick="dismissHadithOfDay(event)" aria-label="بستن"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><span class="hod-label">حدیث امروز</span><p>${s.t}</p><span class="hod-src">${s.s}</span>`;
+  el.onclick = () => go('sayings');
+  setTimeout(()=>{ el.classList.add('show'); }, 900);
+}
+function dismissHadithOfDay(ev){
+  ev.stopPropagation();
+  const today = new Date().toISOString().slice(0,10);
+  localStorage.setItem('hy_hod_dismissed', today);
+  document.getElementById('hadithOfDay').classList.remove('show');
 }
 
 /* ============ 14 MASOOMEEN — biographies ============ */
 const IMAMS = [
   {id:'nabi', badge:'ص', name:'پیامبر اکرم حضرت محمد(ص)', years:'۵۷۰ تا ۶۳۲ میلادی', short:'خاتم پیامبران',
-   bio:`<p>حضرت محمد بن عبدالله(ص) در سال عام‌الفیل در مکه به دنیا آمد. در چهل‌سالگی به پیامبری مبعوث شد و طی بیست و سه سال، قرآن کریم بر او نازل شد. ایشان بنیان‌گذار دین اسلام و در واقعه‌ی غدیر خم، امام علی(ع) را به‌صراحت به‌عنوان جانشین خویش معرفی کردند.</p><p>پیامبر اکرم(ص) در سال یازدهم هجری در مدینه رحلت فرمودند و در همان‌جا مدفون شدند.</p>`},
+   bio:`<p>حضرت محمد بن عبدالله(ص) در سال عام‌الفیل در مکه به دنیا آمد. در چهل‌سالگی به پیامبری مبعوث شد و طی بیست و سه سال، قرآن کریم بر او نازل شد. ایشان بنیان‌گذار دین اسلام و به باور شیعیان، در واقعه‌ی غدیر خم، امام علی(ع) را به‌صراحت به‌عنوان جانشین خویش معرفی کردند.</p><p>پیامبر اکرم(ص) در سال یازدهم هجری در مدینه رحلت فرمودند و در همان‌جا مدفون شدند.</p>`, father:'عبدالله بن عبدالمطلب', mother:'آمنه بنت وهب', birthplace:'مکه مکرمه', deathplace:'مدینه منوره — دفن در مسجدالنبی', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'zahra', badge:'ز', name:'حضرت فاطمه زهرا(س)', years:'۶۰۵ تا ۶۳۲ میلادی', short:'دختر پیامبر و همسر امام علی(ع)',
-   bio:`<p>حضرت فاطمه زهرا(س)، دختر پیامبر اکرم(ص) و همسر امام علی(ع)، مادر امام حسن و امام حسین(ع) است. ایشان یکی از چهار زن برتر عالم و مصداق آیه‌ی تطهیر است.</p><p>پس از رحلت پیامبر(ص)، ایشان به دفاع از حق امامت همسرشان پرداختند و ماجرای فدک و حوادث پس از آن، از دردناک‌ترین رخدادهای صدر اسلام برای شیعیان به شمار می‌رود. ایشان تنها چند ماه پس از پدر، از دنیا رفتند.</p>`},
+   bio:`<p>حضرت فاطمه زهرا(س)، دختر پیامبر اکرم(ص) و همسر امام علی(ع)، مادر امام حسن و امام حسین(ع) است. در باور شیعه، ایشان یکی از چهار زن برتر عالم و مصداق آیه‌ی تطهیر است.</p><p>پس از رحلت پیامبر(ص)، ایشان به دفاع از حق امامت همسرشان پرداختند و ماجرای فدک و حوادث پس از آن، از دردناک‌ترین رخدادهای صدر اسلام برای شیعیان به شمار می‌رود. ایشان تنها چند ماه پس از پدر، از دنیا رفتند.</p>`, father:'پیامبر اکرم(ص)', mother:'خدیجه کبری(س)', birthplace:'مکه مکرمه', deathplace:'مدینه منوره — محل دقیق قبر نامعلوم است', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'ali', badge:'۱', name:'امام علی بن ابی‌طالب(ع)', years:'۶۰۰ تا ۶۶۱ میلادی', short:'امام اول — یعسوب‌الدین',
-   deep:true, bio:''},
+   deep:true, bio:'', father:'ابوطالب بن عبدالمطلب', mother:'فاطمه بنت اسد', birthplace:'مکه مکرمه (درون خانه کعبه)', deathplace:'کوفه — دفن در نجف اشرف', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'hasan', badge:'۲', name:'امام حسن مجتبی(ع)', years:'۶۲۵ تا ۶۶۹ میلادی', short:'امام دوم — کریم اهل‌بیت',
-   bio:`<p>امام حسن مجتبی(ع)، فرزند ارشد امام علی(ع) و حضرت فاطمه(س)، پس از شهادت پدر به امامت رسید. ایشان به دلیل شرایط سخت سیاسی و کاستن از خون‌ریزی میان مسلمانان، با معاویه صلح کردند؛ صلحی که اقدامی حکیمانه برای حفظ اصل تشیع بود، نه واگذاری حق.</p><p>ایشان سرانجام به دسیسه‌ی مسموم شدن به شهادت رسیدند و در قبرستان بقیع مدینه به خاک سپرده شدند.</p>`},
+   bio:`<p>امام حسن مجتبی(ع)، فرزند ارشد امام علی(ع) و حضرت فاطمه(س)، پس از شهادت پدر به امامت رسید. ایشان به دلیل شرایط سخت سیاسی و کاستن از خون‌ریزی میان مسلمانان، با معاویه صلح کردند؛ صلحی که در تحلیل شیعه، اقدامی حکیمانه برای حفظ اصل تشیع بود، نه واگذاری حق.</p><p>ایشان سرانجام به دسیسه‌ی مسموم شدن به شهادت رسیدند و در قبرستان بقیع مدینه به خاک سپرده شدند.</p>`, father:'امام علی(ع)', mother:'حضرت فاطمه زهرا(س)', birthplace:'مدینه منوره', deathplace:'مدینه منوره — دفن در قبرستان بقیع', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'hosein', badge:'۳', name:'امام حسین(ع)', years:'۶۲۶ تا ۶۸۰ میلادی', short:'امام سوم — سالار شهیدان',
-   bio:`<p>امام حسین(ع) در برابر خلافت ظالمانه‌ی یزید بن معاویه قیام کرد و در روز عاشورا (سال ۶۱ هجری) در کربلا، همراه با یاران و اهل‌بیتش، پس از مقاومتی بی‌نظیر، مظلومانه به شهادت رسید. قیام او الهام‌بخش نهضت‌های عدالت‌خواهانه در طول تاریخ اسلام بوده است.</p>`},
+   bio:`<p>امام حسین(ع) در برابر خلافت ظالمانه‌ی یزید بن معاویه قیام کرد و در روز عاشورا (سال ۶۱ هجری) در کربلا، همراه با یاران و اهل‌بیتش، پس از مقاومتی بی‌نظیر، مظلومانه به شهادت رسید. قیام او الهام‌بخش نهضت‌های عدالت‌خواهانه در طول تاریخ اسلام بوده است.</p>`, father:'امام علی(ع)', mother:'حضرت فاطمه زهرا(س)', birthplace:'مدینه منوره', deathplace:'کربلا — دفن در همان‌جا (حرم امام حسین)', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'sajjad', badge:'۴', name:'امام سجاد(ع)', years:'۶۵۸ تا ۷۱۳ میلادی', short:'امام چهارم — زین‌العابدین',
-   bio:`<p>امام سجاد(ع)، تنها فرزند بازمانده‌ی امام حسین(ع) که در کربلا حضور داشت، پس از عاشورا دوران سختی از اسارت و سپس امامتی خاموش و پر از دعا و مناجات را سپری کرد. صحیفه‌ی سجادیه و رساله‌ی حقوق، از میراث ماندگار ایشان است.</p>`},
+   bio:`<p>امام سجاد(ع)، تنها فرزند بازمانده‌ی امام حسین(ع) که در کربلا حضور داشت، پس از عاشورا دوران سختی از اسارت و سپس امامتی خاموش و پر از دعا و مناجات را سپری کرد. صحیفه‌ی سجادیه و رساله‌ی حقوق، از میراث ماندگار ایشان است.</p>`, father:'امام حسین(ع)', mother:'شهربانو (به روایتی)', birthplace:'مدینه منوره', deathplace:'مدینه منوره — دفن در قبرستان بقیع', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'baqir', badge:'۵', name:'امام محمد باقر(ع)', years:'۶۷۶ تا ۷۳۳ میلادی', short:'امام پنجم — باقرالعلوم',
-   bio:`<p>امام باقر(ع) به دلیل گستردگی دانش خویش، به «باقرالعلوم» شهرت یافت. ایشان بنیان‌گذار اصلی حوزه‌ی علمی حدیث و فقه شیعه بودند که فرزندشان امام صادق(ع) آن را به اوج شکوفایی رساند.</p>`},
+   bio:`<p>امام باقر(ع) به دلیل گستردگی دانش خویش، به «باقرالعلوم» شهرت یافت. ایشان بنیان‌گذار اصلی حوزه‌ی علمی حدیث و فقه شیعه بودند که فرزندشان امام صادق(ع) آن را به اوج شکوفایی رساند.</p>`, father:'امام سجاد(ع)', mother:'ام عبدالله بنت الحسن', birthplace:'مدینه منوره', deathplace:'مدینه منوره — دفن در قبرستان بقیع', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'sadiq', badge:'۶', name:'امام جعفر صادق(ع)', years:'۷۰۲ تا ۷۶۵ میلادی', short:'امام ششم — بنیان‌گذار فقه شیعه',
-   bio:`<p>امام صادق(ع) در دورانی که خلافت اموی رو به افول و خلافت عباسی در حال شکل‌گیری بود، فرصتی برای تربیت هزاران شاگرد یافت. مذهب فقهی شیعه‌ی اثنی‌عشری به نام ایشان، «جعفری» نامیده می‌شود.</p>`},
+   bio:`<p>امام صادق(ع) در دورانی که خلافت اموی رو به افول و خلافت عباسی در حال شکل‌گیری بود، فرصتی برای تربیت هزاران شاگرد یافت. مذهب فقهی شیعه‌ی اثنی‌عشری به نام ایشان، «جعفری» نامیده می‌شود.</p>`, father:'امام باقر(ع)', mother:'ام فروة بنت القاسم', birthplace:'مدینه منوره', deathplace:'مدینه منوره — دفن در قبرستان بقیع', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'kazem', badge:'۷', name:'امام موسی کاظم(ع)', years:'۷۴۵ تا ۷۹۹ میلادی', short:'امام هفتم — باب‌الحوائج',
-   bio:`<p>امام کاظم(ع) سال‌های طولانی از امامت خویش را تحت فشار و زندان‌های هارون‌الرشید، خلیفه‌ی عباسی، سپری کرد. ایشان سرانجام در زندان بغداد مسموم و به شهادت رسید و در کاظمین مدفون شد.</p>`},
+   bio:`<p>امام کاظم(ع) سال‌های طولانی از امامت خویش را تحت فشار و زندان‌های هارون‌الرشید، خلیفه‌ی عباسی، سپری کرد. ایشان سرانجام در زندان بغداد مسموم و به شهادت رسید و در کاظمین مدفون شد.</p>`, father:'امام صادق(ع)', mother:'حمیده خاتون', birthplace:'ابواء (نزدیک مدینه)', deathplace:'بغداد — دفن در کاظمین', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'reza', badge:'۸', name:'امام رضا(ع)', years:'۷۶۵ تا ۸۱۸ میلادی', short:'امام هشتم — عالم آل‌محمد',
-   bio:`<p>امام رضا(ع) به اجبار مأمون عباسی، ولیعهد رسمی حکومت شد؛ اقدامی که در نهایت به مسمومیت و شهادت ایشان در طوس (مشهد امروزی) انجامید. حرم مطهر ایشان، تنها حرم امام معصوم در ایران است.</p>`},
+   bio:`<p>امام رضا(ع) به اجبار مأمون عباسی، ولیعهد رسمی حکومت شد؛ اقدامی که در نهایت به مسمومیت و شهادت ایشان در طوس (مشهد امروزی) انجامید. حرم مطهر ایشان، تنها حرم امام معصوم در ایران است.</p>`, father:'امام کاظم(ع)', mother:'نجمه خاتون', birthplace:'مدینه منوره', deathplace:'طوس (مشهد امروزی) — دفن در حرم امام رضا', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'jawad', badge:'۹', name:'امام محمد تقی(ع)', years:'۸۱۱ تا ۸۳۵ میلادی', short:'امام نهم — جواد‌الائمه',
-   bio:`<p>امام جواد(ع) در کودکی به امامت رسید و با وجود سن کم، در مناظرات علمی با دانشمندان زمان خویش، دانش عمیق خود را نشان داد. ایشان نیز به شهادت رسیدند و در کاظمین مدفون شدند.</p>`},
+   bio:`<p>امام جواد(ع) در کودکی به امامت رسید و با وجود سن کم، در مناظرات علمی با دانشمندان زمان خویش، دانش عمیق خود را نشان داد. ایشان نیز به شهادت رسیدند و در کاظمین مدفون شدند.</p>`, father:'امام رضا(ع)', mother:'سبیکه خاتون', birthplace:'مدینه منوره', deathplace:'بغداد — دفن در کاظمین', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'hadi', badge:'۱۰', name:'امام علی الهادی(ع)', years:'۸۲۸ تا ۸۶۸ میلادی', short:'امام دهم — هادی‌الخلق',
-   bio:`<p>امام هادی(ع) بیشتر دوران امامت خویش را تحت نظارت و فشار خلفای عباسی در سامرا گذراند. ایشان با وجود محدودیت‌های شدید، شبکه‌ی وکالت شیعه را برای ارتباط با پیروان خود سازمان دادند.</p>`},
+   bio:`<p>امام هادی(ع) بیشتر دوران امامت خویش را تحت نظارت و فشار خلفای عباسی در سامرا گذراند. ایشان با وجود محدودیت‌های شدید، شبکه‌ی وکالت شیعه را برای ارتباط با پیروان خود سازمان دادند.</p>`, father:'امام جواد(ع)', mother:'سمانه خاتون', birthplace:'صریا (نزدیک مدینه)', deathplace:'سامرا — دفن در حرم عسکریین', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'askari', badge:'۱۱', name:'امام حسن عسکری(ع)', years:'۸۴۶ تا ۸۷۴ میلادی', short:'امام یازدهم — عسکری',
-   bio:`<p>امام عسکری(ع) نیز همچون پدرشان، تحت مراقبت شدید در سامرا زندگی کردند. ایشان پدر امام زمان(عج) هستند و شهادتشان زمینه‌ساز آغاز دوران غیبت صغرا شد.</p>`},
+   bio:`<p>امام عسکری(ع) نیز همچون پدرشان، تحت مراقبت شدید در سامرا زندگی کردند. ایشان پدر امام زمان(عج) هستند و شهادتشان زمینه‌ساز آغاز دوران غیبت صغرا شد.</p>`, father:'امام هادی(ع)', mother:'حدیثه خاتون (سلیل)', birthplace:'مدینه منوره', deathplace:'سامرا — دفن در حرم عسکریین', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'},
   {id:'mahdi', badge:'۱۲', name:'امام مهدی(عج)', years:'تولد ۸۶۹ میلادی — زنده و در غیبت', short:'امام دوازدهم — موعود منتظَر',
-   bio:`<p>امام مهدی(عج)، فرزند امام حسن عسکری(ع)، بنا بر باور شیعه، در سال ۲۶۰ هجری وارد دوران غیبت صغرا و سپس غیبت کبرا شدند و همچنان زنده‌اند تا در زمان موعود، برای برپایی عدالت جهانی ظهور کنند. انتظار فرج ایشان، از ارکان اعتقادی شیعیان است.</p>`}
+   bio:`<p>امام مهدی(عج)، فرزند امام حسن عسکری(ع)، بنا بر باور شیعه، در سال ۲۶۰ هجری وارد دوران غیبت صغرا و سپس غیبت کبرا شدند و همچنان زنده‌اند تا در زمان موعود، برای برپایی عدالت جهانی ظهور کنند. انتظار فرج ایشان، از ارکان اعتقادی شیعیان است.</p>`, father:'امام عسکری(ع)', mother:'نرجس خاتون', birthplace:'سامرا', deathplace:'در غیبت — محل ظهور نامعلوم', src:'منابع: سیره پیشوایان (مهدی پیشوایی)، منتهی‌الآمال (شیخ عباس قمی)، اعیان‌الشیعه (سید محسن امین)'}
 ];
 
 const ALI_BIO = `
-<p>امام علی بن ابی‌طالب(ع) در سال ۶۰۰ میلادی، درون خانه‌ی کعبه به دنیا آمد؛ افتخاری که هیچ‌کس دیگری آن را نداشته است. او پسرعموی پیامبر اکرم(ص) و اولین مرد مسلمان جهان بود که در کودکی به آیین اسلام گروید و هرگز حتی لحظه‌ای بت نپرستید.</p>
+<p>امام علی بن ابی‌طالب(ع) در سال ۶۰۰ میلادی، به روایت مشهور شیعه، درون خانه‌ی کعبه به دنیا آمد؛ افتخاری که هیچ‌کس دیگری آن را نداشته است. او پسرعموی پیامبر اکرم(ص) و اولین مرد مسلمان جهان بود که در کودکی به آیین اسلام گروید و هرگز حتی لحظه‌ای بت نپرستید.</p>
 <p>امام علی(ع) در تمامی غزوات پیامبر(ص) — به‌جز تبوک که به فرمان پیامبر در مدینه ماند — حضوری فعال و تعیین‌کننده داشت؛ از بدر و احد تا خندق و خیبر. شجاعت، ایثار و پایبندی او به حق، از او چهره‌ای بی‌بدیل در تاریخ اسلام ساخته است. او همچنین داماد پیامبر(ص) و همسر حضرت فاطمه زهرا(س)، مادر امام حسن و امام حسین(ع)، بود.</p>
 
 <h3>واقعه‌ی غدیر خم — نص صریح بر جانشینی</h3>
 <p>در سال دهم هجری، پیامبر اکرم(ص) در بازگشت از حجةالوداع، در سرزمین غدیر خم، در برابر جمعیتی عظیم از حجاج، دست امام علی(ع) را بالا برد و فرمود: «مَن کُنتُ مولاه فهذا علیٌّ مولاه» — هر که من مولای اویم، این علی مولای اوست. شیعیان این سخن را نص صریح پیامبر(ص) بر جانشینی بلافصل امام علی(ع) می‌دانند، رخدادی که در منابع اهل سنت نیز با اسناد متعدد گزارش شده، هرچند در تفسیر معنای «مولا» اختلاف نظر وجود دارد.</p>
 
 <h3>چرا خلافت باید به او می‌رسید</h3>
-<p>دلایل متعددی بر شایستگی و حق مسلّم امام علی(ع) برای جانشینی پیامبر(ص) وجود دارد: نص صریح غدیر خم، قرابت نزدیک با پیامبر(ص)، اولین ایمان‌آورنده بودن، برترین جایگاه علمی («أنا مدینة العلم و علیٌّ بابها»)، و شجاعت و فداکاری بی‌مانند او در دفاع از اسلام، از جمله در لیلة‌المبیت که به‌جای پیامبر(ص) در بستر او خوابید تا جان پیامبر(ص) را از قصد قتل مشرکان مکه حفظ کند.</p>
+<p>از منظر شیعه، دلایل متعددی بر شایستگی و حق مسلّم امام علی(ع) برای جانشینی پیامبر(ص) وجود دارد: نص صریح غدیر خم، قرابت نزدیک با پیامبر(ص)، اولین ایمان‌آورنده بودن، برترین جایگاه علمی («أنا مدینة العلم و علیٌّ بابها»)، و شجاعت و فداکاری بی‌مانند او در دفاع از اسلام، از جمله در لیلة‌المبیت که به‌جای پیامبر(ص) در بستر او خوابید تا جان پیامبر(ص) را از قصد قتل مشرکان مکه حفظ کند.</p>
 
 <h3>مظلومیت پس از رحلت پیامبر(ص)</h3>
-<p>بلافاصله پس از رحلت پیامبر(ص)، در حالی که امام علی(ع) مشغول تجهیز و کفن‌ودفن ایشان بود، جمعی در سقیفه‌ی بنی‌ساعده گرد آمدند و بدون مشورت با خاندان پیامبر(ص)، فردی دیگر را به خلافت برگزیدند. امام علی(ع) برای حفظ وحدت مسلمانان و جلوگیری از تفرقه در دورانی حساس، از قیام مسلحانه خودداری کرد، هرچند حق خویش را آشکارا و به‌صراحت در سخنانی چون خطبه‌ی شقشقیه بیان نمود.</p>
-<p>در پی این رخدادها، ماجرای فدک — زمینی که پیامبر(ص) در حیات خویش به دخترشان فاطمه(س) بخشیده بودند — نیز به بحرانی دردناک تبدیل شد. علی‌رغم اعتراض و خطبه‌ی معروف حضرت زهرا(س)، فدک از ایشان پس گرفته شد؛ رخدادی که در کنار حوادث دیگر آن ایام، از مصداق‌های آشکار ظلم به خاندان پیامبر(ص) است.</p>
+<p>در باور شیعه، بلافاصله پس از رحلت پیامبر(ص)، در حالی که امام علی(ع) مشغول تجهیز و کفن‌ودفن ایشان بود، جمعی در سقیفه‌ی بنی‌ساعده گرد آمدند و بدون مشورت با خاندان پیامبر(ص)، فردی دیگر را به خلافت برگزیدند. امام علی(ع) برای حفظ وحدت مسلمانان و جلوگیری از تفرقه در دورانی حساس، از قیام مسلحانه خودداری کرد، هرچند حق خویش را آشکارا و به‌صراحت در سخنانی چون خطبه‌ی شقشقیه بیان نمود.</p>
+<p>در پی این رخدادها، ماجرای فدک — زمینی که پیامبر(ص) در حیات خویش به دخترشان فاطمه(س) بخشیده بودند — نیز به بحرانی دردناک تبدیل شد. علی‌رغم اعتراض و خطبه‌ی معروف حضرت زهرا(س)، فدک از ایشان پس گرفته شد؛ رخدادی که در کنار حوادث دیگر آن ایام، به باور شیعیان از مصداق‌های آشکار ظلم به خاندان پیامبر(ص) است.</p>
 <p>امام علی(ع) سرانجام پس از بیست و پنج سال خانه‌نشینی و دوری از منصب حقیقی خویش، در سال ۳۵ هجری به خلافت رسید؛ دورانی که با جنگ‌های جمل، صفین و نهروان — تحمیل‌شده از سوی مخالفان داخلی — همراه بود. او حتی در اوج قدرت نیز به عدالت و ساده‌زیستی شهره بود و از بیت‌المال مسلمانان، حتی به‌اندازه‌ی سر سوزنی، برای خود برنمی‌داشت.</p>
 <p>سرانجام در نوزدهم رمضان سال ۴۰ هجری، به دست عبدالرحمن بن ملجم مرادی، عضو گروه خوارج، در محراب مسجد کوفه، هنگام نماز صبح ضربت خورد و دو روز بعد، در بیست‌ویکم رمضان، به شهادت رسید. امام علی(ع) در نجف اشرف مدفون است و حرم مطهر او یکی از مقدس‌ترین اماکن جهان تشیع به شمار می‌رود.</p>
 <p style="font-size:11.5px; color:var(--text-sub);">توضیح: این متن براساس منابع و روایت تاریخی رایج در سنت شیعه نگاشته شده است؛ برخی از این رخدادها در میان مذاهب اسلامی، به‌ویژه در تفسیر و ارزیابی، محل اختلاف نظرند.</p>
@@ -2058,13 +2645,22 @@ function renderImamDetail(id){
   if(!im) return;
   const wrap = document.getElementById('imamDetailWrap');
   const bioContent = im.deep ? ALI_BIO : im.bio;
+  const infoGrid = (im.father || im.mother || im.birthplace || im.deathplace) ? `
+    <div class="list-card" style="margin-bottom:16px; padding:14px;">
+      ${im.father ? `<div class="row" style="padding:8px 4px;"><div class="row-info"><div class="r2">پدر</div><div class="r1" style="font-size:12.5px;">${im.father}</div></div></div>` : ''}
+      ${im.mother ? `<div class="row" style="padding:8px 4px;"><div class="row-info"><div class="r2">مادر</div><div class="r1" style="font-size:12.5px;">${im.mother}</div></div></div>` : ''}
+      ${im.birthplace ? `<div class="row" style="padding:8px 4px;"><div class="row-info"><div class="r2">محل ولادت</div><div class="r1" style="font-size:12.5px;">${im.birthplace}</div></div></div>` : ''}
+      ${im.deathplace ? `<div class="row" style="padding:8px 4px;"><div class="row-info"><div class="r2">محل شهادت/رحلت و دفن</div><div class="r1" style="font-size:12.5px;">${im.deathplace}</div></div></div>` : ''}
+    </div>` : '';
   wrap.innerHTML = `
     <div class="imam-hero">
       <div class="im-badge" style="margin:0 auto 12px auto;">${im.badge}</div>
       <h2>${im.name}</h2>
       <p>${im.years} · ${im.short}</p>
     </div>
+    ${infoGrid}
     <div class="imam-body">${bioContent}</div>
+    ${im.src ? `<p style="font-size:10.5px; color:var(--text-sub); margin-top:16px; padding-top:12px; border-top:1px solid var(--cream-deep);">${im.src}</p>` : ''}
   `;
   window.scrollTo(0,0);
 }
@@ -2143,7 +2739,16 @@ const NEWS_SOURCES = [
   {name:'خبرگزاری رسا', desc:'اخبار حوزه و روحانیت', domain:'rasanews.ir', url:'https://www.rasanews.ir'},
   {name:'العالم', desc:'اخبار بین‌الملل', domain:'alalamtv.net', url:'https://www.alalamtv.net'},
   {name:'الجزیره', desc:'اخبار جهانی', domain:'aljazeera.net', url:'https://www.aljazeera.net'},
-  {name:'BBC فارسی', desc:'اخبار بین‌المللی به زبان فارسی', domain:'bbc.com', url:'https://www.bbc.com/persian'}
+  {name:'خبرگزاری تسنیم', desc:'اخبار سیاسی و اجتماعی', domain:'tasnimnews.com', url:'https://www.tasnimnews.com'},
+  {name:'خبرگزاری فارس', desc:'اخبار سیاسی، اقتصادی و ورزشی', domain:'farsnews.ir', url:'https://www.farsnews.ir'},
+  {name:'صدا و سیما (خبر)', desc:'اخبار رسمی صداوسیما', domain:'iribnews.ir', url:'https://www.iribnews.ir'},
+  {name:'روزنامه کیهان', desc:'تحلیل و اخبار سیاسی', domain:'kayhan.ir', url:'https://kayhan.ir'},
+  {name:'خبرگزاری جمهوری اسلامی', desc:'پایگاه رسمی اطلاع‌رسانی', domain:'irna.ir', url:'https://www.irna.ir'},
+  {name:'خبرآنلاین', desc:'اخبار عمومی و تحلیلی', domain:'khabaronline.ir', url:'https://www.khabaronline.ir'},
+  {name:'باشگاه خبرنگاران جوان', desc:'اخبار عمومی و اجتماعی', domain:'yjc.ir', url:'https://www.yjc.ir'},
+  {name:'العهد', desc:'اخبار مقاومت و منطقه', domain:'alahednews.com.lb', url:'https://www.alahednews.com.lb'},
+  {name:'خبرگزاری آنا', desc:'اخبار دانشگاه آزاد و علمی', domain:'ana.press', url:'https://www.ana.press'},
+  {name:'پرس‌تی‌وی', desc:'اخبار بین‌الملل به انگلیسی', domain:'presstv.ir', url:'https://www.presstv.ir'}
 ];
 function renderNews(query){
   const q = (query || document.getElementById('newsSearchInput')?.value || '').trim().toLowerCase();
@@ -2158,14 +2763,8 @@ function renderNews(query){
     </div>`).join('') || `<div class="empty-state"><h4>نتیجه‌ای پیدا نشد</h4></div>`;
 }
 
-/* ============ ECONOMY — live market prices ============ */
+/* ============ ECONOMY — live USD price ============ */
 let econLoaded = false;
-const CRYPTO_LIST = [
-  {id:'bitcoin', name:'بیت‌کوین', symbol:'BTC'},
-  {id:'ethereum', name:'اتریوم', symbol:'ETH'},
-  {id:'tether', name:'تتر', symbol:'USDT'},
-  {id:'binancecoin', name:'بایننس‌کوین', symbol:'BNB'}
-];
 function iconSvg(path){ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${path}</svg>`; }
 function priceCard(name, val, chgTxt, chgUp, icon){
   return `<div class="price-card">
@@ -2184,26 +2783,48 @@ async function loadEconomyPrices(manual){
   if(manual || !econLoaded){
     if(updated) updated.textContent = 'در حال دریافت آخرین قیمت‌ها...';
   }
-  // ---- Crypto via CoinGecko (no API key required) ----
+  // ---- Gold / Coin / Currency (IRR market, free public endpoint) ----
   try{
-    const ids = CRYPTO_LIST.map(c=>c.id).join(',');
-    const res = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true`);
+    const res = await fetch('https://api.codebazan.ir/arz/');
     const data = await res.json();
-    const grid = document.getElementById('cryptoPriceGrid');
-    if(grid){
-      grid.innerHTML = CRYPTO_LIST.map(c=>{
-        const d = data[c.id];
-        if(!d) return priceCard(c.name+' ('+c.symbol+')', '—', null, true, iconSvg('<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5h4a2 2 0 010 4H9m0 0h4.5a2 2 0 010 4H9"/>'));
-        const chg = d.usd_24h_change || 0;
-        return priceCard(c.name+' ('+c.symbol+')', fmtUsd(d.usd), Math.abs(chg).toFixed(2)+'%', chg>=0, iconSvg('<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5h4a2 2 0 010 4H9m0 0h4.5a2 2 0 010 4H9"/>'));
-      }).join('');
+    const find = (key) => Array.isArray(data) ? data.find(x => (x.title_en||x.key||'').toLowerCase().includes(key) || (x.title||'').includes(key)) : null;
+    const gold18 = find('geram18') || find('gold_18') || find('طلای 18');
+    const coinEmami = find('sekee') || find('emami') || find('سکه امامی');
+    const coinRobe = find('rob_sekee') || find('ربع');
+    const coinNim = find('nim_sekee') || find('نیم');
+    const dollar = find('usd') || find('دلار');
+    const goldGrid = document.getElementById('goldPriceGrid');
+    const dollarSpotlight = document.getElementById('dollarSpotlight');
+    const gi = iconSvg('<circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>');
+    const ci = iconSvg('<circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/>');
+    if(goldGrid){
+      goldGrid.innerHTML =
+        priceCard('طلای ۱۸ عیار (گرم)', gold18 ? fmtToman(gold18.price) : 'نیازمند بروزرسانی', null, true, gi) +
+        priceCard('سکه امامی', coinEmami ? fmtToman(coinEmami.price) : 'نیازمند بروزرسانی', null, true, ci) +
+        priceCard('نیم سکه', coinNim ? fmtToman(coinNim.price) : 'نیازمند بروزرسانی', null, true, ci) +
+        priceCard('ربع سکه', coinRobe ? fmtToman(coinRobe.price) : 'نیازمند بروزرسانی', null, true, ci);
+    }
+    if(dollarSpotlight){
+      if(dollar){
+        const chg = typeof dollar.change_percent === 'number' ? dollar.change_percent : (typeof dollar.change === 'number' ? dollar.change : null);
+        dollarSpotlight.innerHTML = `
+          <div class="ds-label">دلار آمریکا <span>USD/IRT</span></div>
+          <div class="ds-value">${fmtToman(dollar.price)}</div>
+          ${chg!==null ? `<div class="ds-chg ${chg>=0?'up':'down'}">${chg>=0?'▲':'▼'} ${Math.abs(chg).toFixed(2)}٪ نسبت به روز قبل</div>` : `<div class="ds-chg-neutral">تغییرات لحظه‌ای در دسترس نیست</div>`}
+          <div class="ds-foot">منبع: بازار آزاد ارز — به‌روزرسانی خودکار هر بار که این صفحه باز می‌شود</div>`;
+      } else {
+        dollarSpotlight.innerHTML = `<div class="ds-label">دلار آمریکا</div><div class="ds-value">نیازمند بروزرسانی</div>`;
+      }
     }
   }catch(err){
-    const grid = document.getElementById('cryptoPriceGrid');
-    if(grid) grid.innerHTML = `<div class="econ-note" style="grid-column:1/-1;">دریافت قیمت ارز دیجیتال ممکن نشد — اتصال اینترنت یا دسترسی به CoinGecko را بررسی کنید.</div>`;
+    const goldGrid = document.getElementById('goldPriceGrid');
+    const dollarSpotlight = document.getElementById('dollarSpotlight');
+    const note = `<div class="econ-note" style="grid-column:1/-1;">قیمت طلا، سکه و دلار به‌صورت پیش‌فرض به یک منبع رایگان وصل است. اگر نمایش داده نشد، لطفاً آدرس API دلخواه خود (مانند brsapi یا navasan) را در تابع loadEconomyPrices جایگزین کنید.</div>`;
+    if(goldGrid) goldGrid.innerHTML = note;
+    if(dollarSpotlight) dollarSpotlight.innerHTML = `<div class="ds-label">دلار آمریکا</div><div class="ds-value">خطا در دریافت قیمت</div>`;
   }
   econLoaded = true;
-  if(updated) updated.textContent = 'آخرین به‌روزرسانی ارز دیجیتال: ' + new Date().toLocaleTimeString('fa-IR');
+  if(updated) updated.textContent = 'آخرین به‌روزرسانی: ' + new Date().toLocaleTimeString('fa-IR');
   if(btn) setTimeout(()=>btn.classList.remove('spin'), 500);
 }
 
@@ -3028,6 +3649,32 @@ function playOnlineTrack(i){
   document.getElementById('miniPlayer').classList.add('show');
 }
 renderOnlineMaddah();
+
+/* =========================================================
+   NEW: SEARCH ASSISTANT — redirects the user's question to Google
+========================================================= */
+function openSearchPanel(){
+  document.getElementById('searchOverlay').classList.add('show');
+  document.getElementById('searchPanel').classList.add('show');
+  setTimeout(()=>document.getElementById('searchInput').focus(), 200);
+}
+function closeSearchPanel(){
+  document.getElementById('searchOverlay').classList.remove('show');
+  document.getElementById('searchPanel').classList.remove('show');
+}
+function runGoogleSearch(){
+  const q = document.getElementById('searchInput').value.trim();
+  if(!q) return;
+  window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank');
+  closeSearchPanel();
+}
+
+/* ============ FINAL INIT ============ */
+renderMusicList();
+renderHomeRecent();
+renderQuicknav();
+renderHadithOfDay();
+setTimeout(()=>{ const s=document.getElementById('splash'); if(s) s.classList.add('hide'); }, 1500);
 
 </script>
 </body>
